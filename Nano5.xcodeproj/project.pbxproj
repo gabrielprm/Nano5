@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892132F226DEA4E500737399 /* Events+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132EC26DEA4E500737399 /* Events+CoreDataClass.swift */; };
+		892132F326DEA4E500737399 /* Events+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132ED26DEA4E500737399 /* Events+CoreDataProperties.swift */; };
+		892132F426DEA4E500737399 /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132EE26DEA4E500737399 /* Trip+CoreDataClass.swift */; };
+		892132F526DEA4E500737399 /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132EF26DEA4E500737399 /* Trip+CoreDataProperties.swift */; };
+		892132F626DEA4E500737399 /* TodoList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132F026DEA4E500737399 /* TodoList+CoreDataClass.swift */; };
+		892132F726DEA4E500737399 /* TodoList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132F126DEA4E500737399 /* TodoList+CoreDataProperties.swift */; };
+		892132F926DEA67200737399 /* todoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132F826DEA67200737399 /* todoItem.swift */; };
 		8977D8BC26DD4A7500FEF577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */; };
 		8977D8BE26DD4A7500FEF577 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */; };
 		8977D8C026DD4A7500FEF577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BF26DD4A7500FEF577 /* ViewController.swift */; };
@@ -25,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		892132EC26DEA4E500737399 /* Events+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataClass.swift"; sourceTree = "<group>"; };
+		892132ED26DEA4E500737399 /* Events+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		892132EE26DEA4E500737399 /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
+		892132EF26DEA4E500737399 /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		892132F026DEA4E500737399 /* TodoList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		892132F126DEA4E500737399 /* TodoList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		892132F826DEA67200737399 /* todoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoItem.swift; sourceTree = "<group>"; };
 		8977D8B826DD4A7500FEF577 /* Nano5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		892132DF26DEA33000737399 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				892132EC26DEA4E500737399 /* Events+CoreDataClass.swift */,
+				892132ED26DEA4E500737399 /* Events+CoreDataProperties.swift */,
+				892132EE26DEA4E500737399 /* Trip+CoreDataClass.swift */,
+				892132EF26DEA4E500737399 /* Trip+CoreDataProperties.swift */,
+				892132F026DEA4E500737399 /* TodoList+CoreDataClass.swift */,
+				892132F126DEA4E500737399 /* TodoList+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8977D8AF26DD4A7500FEF577 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +101,7 @@
 		8977D8BA26DD4A7500FEF577 /* Nano5 */ = {
 			isa = PBXGroup;
 			children = (
+				892132DF26DEA33000737399 /* Model */,
 				8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */,
 				8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */,
 				8977D8BF26DD4A7500FEF577 /* ViewController.swift */,
@@ -83,6 +111,7 @@
 				8977D8C926DD4A7600FEF577 /* LaunchScreen.storyboard */,
 				8977D8CC26DD4A7600FEF577 /* Info.plist */,
 				8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */,
+				892132F826DEA67200737399 /* todoItem.swift */,
 			);
 			path = Nano5;
 			sourceTree = "<group>";
@@ -184,12 +213,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892132F926DEA67200737399 /* todoItem.swift in Sources */,
+				892132F426DEA4E500737399 /* Trip+CoreDataClass.swift in Sources */,
 				BA50EC5B26DD543200FB2C03 /* TripsTableViewCell.swift in Sources */,
 				8977D8C026DD4A7500FEF577 /* ViewController.swift in Sources */,
+				892132F726DEA4E500737399 /* TodoList+CoreDataProperties.swift in Sources */,
 				8977D8BC26DD4A7500FEF577 /* AppDelegate.swift in Sources */,
 				BA50EC7126DD936900FB2C03 /* ToDoTableViewCell.swift in Sources */,
+				892132F326DEA4E500737399 /* Events+CoreDataProperties.swift in Sources */,
+				892132F526DEA4E500737399 /* Trip+CoreDataProperties.swift in Sources */,
 				BA50EC6926DD611900FB2C03 /* EventsTableViewCell.swift in Sources */,
+				892132F626DEA4E500737399 /* TodoList+CoreDataClass.swift in Sources */,
 				8977D8BE26DD4A7500FEF577 /* SceneDelegate.swift in Sources */,
+				892132F226DEA4E500737399 /* Events+CoreDataClass.swift in Sources */,
 				BA50EC6526DD5F5900FB2C03 /* CheckListsTableViewCell.swift in Sources */,
 				8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */,
 			);

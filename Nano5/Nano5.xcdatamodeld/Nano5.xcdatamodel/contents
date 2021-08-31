@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Events" representedClassName="Events" syncable="YES">
+        <attribute name="dataInicio" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="descricao" optional="YES" attributeType="String"/>
+        <attribute name="endereco" optional="YES" attributeType="String"/>
+        <attribute name="horaInicio" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+        <attribute name="titulo" optional="YES" attributeType="String"/>
+        <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trip" inverseName="event" inverseEntity="Trip"/>
+    </entity>
+    <entity name="TodoList" representedClassName="TodoList" syncable="YES">
+        <attribute name="item" optional="YES" attributeType="Transformable" customClassName="[(String, Bool)]"/>
+        <attribute name="titulo" optional="YES" attributeType="String"/>
+        <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="todoList" inverseEntity="Trip"/>
+    </entity>
+    <entity name="Trip" representedClassName="Trip" syncable="YES">
+        <attribute name="cidade" optional="YES" attributeType="String"/>
+        <attribute name="dataChegada" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dataSaida" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+        <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Events" inverseName="event" inverseEntity="Events"/>
+        <relationship name="todoList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TodoList" inverseName="trip" inverseEntity="TodoList"/>
+    </entity>
+    <elements>
+        <element name="Trip" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="TodoList" positionX="-54" positionY="36" width="128" height="74"/>
+        <element name="Events" positionX="-36" positionY="45" width="128" height="149"/>
+    </elements>
 </model>
