@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		892132F226DEA4E500737399 /* Events+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132EC26DEA4E500737399 /* Events+CoreDataClass.swift */; };
-		892132F326DEA4E500737399 /* Events+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132ED26DEA4E500737399 /* Events+CoreDataProperties.swift */; };
-		892132F426DEA4E500737399 /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132EE26DEA4E500737399 /* Trip+CoreDataClass.swift */; };
-		892132F526DEA4E500737399 /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132EF26DEA4E500737399 /* Trip+CoreDataProperties.swift */; };
-		892132F626DEA4E500737399 /* TodoList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132F026DEA4E500737399 /* TodoList+CoreDataClass.swift */; };
-		892132F726DEA4E500737399 /* TodoList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132F126DEA4E500737399 /* TodoList+CoreDataProperties.swift */; };
-		892132F926DEA67200737399 /* todoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132F826DEA67200737399 /* todoItem.swift */; };
+		892132F926DEA67200737399 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892132F826DEA67200737399 /* TodoItem.swift */; };
 		8977D8BC26DD4A7500FEF577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */; };
 		8977D8BE26DD4A7500FEF577 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */; };
 		8977D8C026DD4A7500FEF577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BF26DD4A7500FEF577 /* ViewController.swift */; };
 		8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */; };
 		8977D8C826DD4A7600FEF577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C726DD4A7600FEF577 /* Assets.xcassets */; };
 		8977D8CB26DD4A7600FEF577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C926DD4A7600FEF577 /* LaunchScreen.storyboard */; };
+		B2B471F926DEA76A0084A4F2 /* TodoList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B471F326DEA76A0084A4F2 /* TodoList+CoreDataClass.swift */; };
+		B2B471FA26DEA76A0084A4F2 /* TodoList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B471F426DEA76A0084A4F2 /* TodoList+CoreDataProperties.swift */; };
+		B2B471FB26DEA76A0084A4F2 /* Events+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B471F526DEA76A0084A4F2 /* Events+CoreDataClass.swift */; };
+		B2B471FC26DEA76A0084A4F2 /* Events+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B471F626DEA76A0084A4F2 /* Events+CoreDataProperties.swift */; };
+		B2B471FD26DEA76A0084A4F2 /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B471F726DEA76A0084A4F2 /* Trip+CoreDataClass.swift */; };
+		B2B471FE26DEA76A0084A4F2 /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B471F826DEA76A0084A4F2 /* Trip+CoreDataProperties.swift */; };
 		BA50EC5826DD4E4C00FB2C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC5726DD4E4C00FB2C03 /* Main.storyboard */; };
 		BA50EC5B26DD543200FB2C03 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50EC5926DD543200FB2C03 /* TripsTableViewCell.swift */; };
 		BA50EC5C26DD543200FB2C03 /* TripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC5A26DD543200FB2C03 /* TripsTableViewCell.xib */; };
@@ -32,13 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		892132EC26DEA4E500737399 /* Events+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataClass.swift"; sourceTree = "<group>"; };
-		892132ED26DEA4E500737399 /* Events+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		892132EE26DEA4E500737399 /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
-		892132EF26DEA4E500737399 /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		892132F026DEA4E500737399 /* TodoList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoList+CoreDataClass.swift"; sourceTree = "<group>"; };
-		892132F126DEA4E500737399 /* TodoList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoList+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		892132F826DEA67200737399 /* todoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoItem.swift; sourceTree = "<group>"; };
+		892132F826DEA67200737399 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		8977D8B826DD4A7500FEF577 /* Nano5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +41,12 @@
 		8977D8C726DD4A7600FEF577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8977D8CA26DD4A7600FEF577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8977D8CC26DD4A7600FEF577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2B471F326DEA76A0084A4F2 /* TodoList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2B471F426DEA76A0084A4F2 /* TodoList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2B471F526DEA76A0084A4F2 /* Events+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2B471F626DEA76A0084A4F2 /* Events+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2B471F726DEA76A0084A4F2 /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B2B471F826DEA76A0084A4F2 /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA50EC5726DD4E4C00FB2C03 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BA50EC5926DD543200FB2C03 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		BA50EC5A26DD543200FB2C03 /* TripsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripsTableViewCell.xib; sourceTree = "<group>"; };
@@ -72,12 +72,12 @@
 		892132DF26DEA33000737399 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				892132EC26DEA4E500737399 /* Events+CoreDataClass.swift */,
-				892132ED26DEA4E500737399 /* Events+CoreDataProperties.swift */,
-				892132EE26DEA4E500737399 /* Trip+CoreDataClass.swift */,
-				892132EF26DEA4E500737399 /* Trip+CoreDataProperties.swift */,
-				892132F026DEA4E500737399 /* TodoList+CoreDataClass.swift */,
-				892132F126DEA4E500737399 /* TodoList+CoreDataProperties.swift */,
+				B2B471F326DEA76A0084A4F2 /* TodoList+CoreDataClass.swift */,
+				B2B471F426DEA76A0084A4F2 /* TodoList+CoreDataProperties.swift */,
+				B2B471F526DEA76A0084A4F2 /* Events+CoreDataClass.swift */,
+				B2B471F626DEA76A0084A4F2 /* Events+CoreDataProperties.swift */,
+				B2B471F726DEA76A0084A4F2 /* Trip+CoreDataClass.swift */,
+				B2B471F826DEA76A0084A4F2 /* Trip+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,7 +111,7 @@
 				8977D8C926DD4A7600FEF577 /* LaunchScreen.storyboard */,
 				8977D8CC26DD4A7600FEF577 /* Info.plist */,
 				8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */,
-				892132F826DEA67200737399 /* todoItem.swift */,
+				892132F826DEA67200737399 /* TodoItem.swift */,
 			);
 			path = Nano5;
 			sourceTree = "<group>";
@@ -213,21 +213,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				892132F926DEA67200737399 /* todoItem.swift in Sources */,
-				892132F426DEA4E500737399 /* Trip+CoreDataClass.swift in Sources */,
+				892132F926DEA67200737399 /* TodoItem.swift in Sources */,
 				BA50EC5B26DD543200FB2C03 /* TripsTableViewCell.swift in Sources */,
 				8977D8C026DD4A7500FEF577 /* ViewController.swift in Sources */,
-				892132F726DEA4E500737399 /* TodoList+CoreDataProperties.swift in Sources */,
+				B2B471FE26DEA76A0084A4F2 /* Trip+CoreDataProperties.swift in Sources */,
 				8977D8BC26DD4A7500FEF577 /* AppDelegate.swift in Sources */,
 				BA50EC7126DD936900FB2C03 /* ToDoTableViewCell.swift in Sources */,
-				892132F326DEA4E500737399 /* Events+CoreDataProperties.swift in Sources */,
-				892132F526DEA4E500737399 /* Trip+CoreDataProperties.swift in Sources */,
 				BA50EC6926DD611900FB2C03 /* EventsTableViewCell.swift in Sources */,
-				892132F626DEA4E500737399 /* TodoList+CoreDataClass.swift in Sources */,
+				B2B471FB26DEA76A0084A4F2 /* Events+CoreDataClass.swift in Sources */,
+				B2B471FC26DEA76A0084A4F2 /* Events+CoreDataProperties.swift in Sources */,
+				B2B471FD26DEA76A0084A4F2 /* Trip+CoreDataClass.swift in Sources */,
 				8977D8BE26DD4A7500FEF577 /* SceneDelegate.swift in Sources */,
-				892132F226DEA4E500737399 /* Events+CoreDataClass.swift in Sources */,
+				B2B471F926DEA76A0084A4F2 /* TodoList+CoreDataClass.swift in Sources */,
 				BA50EC6526DD5F5900FB2C03 /* CheckListsTableViewCell.swift in Sources */,
 				8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */,
+				B2B471FA26DEA76A0084A4F2 /* TodoList+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

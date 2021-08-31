@@ -7,17 +7,14 @@
 
 import Foundation
 
-
-public class TodoItem: NSObject, NSCoding{
+public class TodoItem: NSObject {
 
     var titulo: String
     var isCompleted: Bool
     
-    public func encode(with coder: NSCoder) {
-        
+    init(titulo: String, isCompleted: Bool) {
+        self.titulo = titulo
+        self.isCompleted = isCompleted
     }
     
-    public required init?(coder: NSCoder) {
-        <#code#>
-    }
 }
