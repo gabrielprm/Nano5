@@ -14,6 +14,15 @@
 		8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */; };
 		8977D8C826DD4A7600FEF577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C726DD4A7600FEF577 /* Assets.xcassets */; };
 		8977D8CB26DD4A7600FEF577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C926DD4A7600FEF577 /* LaunchScreen.storyboard */; };
+		BA50EC5826DD4E4C00FB2C03 /* sopratestar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC5726DD4E4C00FB2C03 /* sopratestar.storyboard */; };
+		BA50EC5B26DD543200FB2C03 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50EC5926DD543200FB2C03 /* TripsTableViewCell.swift */; };
+		BA50EC5C26DD543200FB2C03 /* TripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC5A26DD543200FB2C03 /* TripsTableViewCell.xib */; };
+		BA50EC6526DD5F5900FB2C03 /* CheckListsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50EC6326DD5F5900FB2C03 /* CheckListsTableViewCell.swift */; };
+		BA50EC6626DD5F5900FB2C03 /* CheckListsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC6426DD5F5900FB2C03 /* CheckListsTableViewCell.xib */; };
+		BA50EC6926DD611900FB2C03 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50EC6726DD611900FB2C03 /* EventsTableViewCell.swift */; };
+		BA50EC6A26DD611900FB2C03 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC6826DD611900FB2C03 /* EventsTableViewCell.xib */; };
+		BA50EC7126DD936900FB2C03 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50EC6F26DD936900FB2C03 /* ToDoTableViewCell.swift */; };
+		BA50EC7226DD936900FB2C03 /* ToDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC7026DD936900FB2C03 /* ToDoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		8977D8C726DD4A7600FEF577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8977D8CA26DD4A7600FEF577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8977D8CC26DD4A7600FEF577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA50EC5726DD4E4C00FB2C03 /* sopratestar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = sopratestar.storyboard; sourceTree = "<group>"; };
+		BA50EC5926DD543200FB2C03 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		BA50EC5A26DD543200FB2C03 /* TripsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripsTableViewCell.xib; sourceTree = "<group>"; };
+		BA50EC6326DD5F5900FB2C03 /* CheckListsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListsTableViewCell.swift; sourceTree = "<group>"; };
+		BA50EC6426DD5F5900FB2C03 /* CheckListsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckListsTableViewCell.xib; sourceTree = "<group>"; };
+		BA50EC6726DD611900FB2C03 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		BA50EC6826DD611900FB2C03 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
+		BA50EC6F26DD936900FB2C03 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		BA50EC7026DD936900FB2C03 /* ToDoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +80,37 @@
 				8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */,
 				8977D8BF26DD4A7500FEF577 /* ViewController.swift */,
 				8977D8C126DD4A7500FEF577 /* Main.storyboard */,
+				BA50EC5726DD4E4C00FB2C03 /* sopratestar.storyboard */,
+				BA50EC5E26DD5DE000FB2C03 /* Componentes */,
 				8977D8C726DD4A7600FEF577 /* Assets.xcassets */,
 				8977D8C926DD4A7600FEF577 /* LaunchScreen.storyboard */,
 				8977D8CC26DD4A7600FEF577 /* Info.plist */,
 				8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */,
 			);
 			path = Nano5;
+			sourceTree = "<group>";
+		};
+		BA50EC5D26DD5DCE00FB2C03 /* Celulas */ = {
+			isa = PBXGroup;
+			children = (
+				BA50EC5926DD543200FB2C03 /* TripsTableViewCell.swift */,
+				BA50EC5A26DD543200FB2C03 /* TripsTableViewCell.xib */,
+				BA50EC6326DD5F5900FB2C03 /* CheckListsTableViewCell.swift */,
+				BA50EC6426DD5F5900FB2C03 /* CheckListsTableViewCell.xib */,
+				BA50EC6726DD611900FB2C03 /* EventsTableViewCell.swift */,
+				BA50EC6826DD611900FB2C03 /* EventsTableViewCell.xib */,
+				BA50EC6F26DD936900FB2C03 /* ToDoTableViewCell.swift */,
+				BA50EC7026DD936900FB2C03 /* ToDoTableViewCell.xib */,
+			);
+			path = Celulas;
+			sourceTree = "<group>";
+		};
+		BA50EC5E26DD5DE000FB2C03 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				BA50EC5D26DD5DCE00FB2C03 /* Celulas */,
+			);
+			path = Componentes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +170,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA50EC6A26DD611900FB2C03 /* EventsTableViewCell.xib in Resources */,
 				8977D8CB26DD4A7600FEF577 /* LaunchScreen.storyboard in Resources */,
+				BA50EC5C26DD543200FB2C03 /* TripsTableViewCell.xib in Resources */,
+				BA50EC5826DD4E4C00FB2C03 /* sopratestar.storyboard in Resources */,
+				BA50EC6626DD5F5900FB2C03 /* CheckListsTableViewCell.xib in Resources */,
 				8977D8C826DD4A7600FEF577 /* Assets.xcassets in Resources */,
 				8977D8C326DD4A7500FEF577 /* Main.storyboard in Resources */,
+				BA50EC7226DD936900FB2C03 /* ToDoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +188,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA50EC5B26DD543200FB2C03 /* TripsTableViewCell.swift in Sources */,
 				8977D8C026DD4A7500FEF577 /* ViewController.swift in Sources */,
 				8977D8BC26DD4A7500FEF577 /* AppDelegate.swift in Sources */,
+				BA50EC7126DD936900FB2C03 /* ToDoTableViewCell.swift in Sources */,
+				BA50EC6926DD611900FB2C03 /* EventsTableViewCell.swift in Sources */,
 				8977D8BE26DD4A7500FEF577 /* SceneDelegate.swift in Sources */,
+				BA50EC6526DD5F5900FB2C03 /* CheckListsTableViewCell.swift in Sources */,
 				8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZWZGGS7F2;
+				DEVELOPMENT_TEAM = 762WF834XB;
 				INFOPLIST_FILE = Nano5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZWZGGS7F2;
+				DEVELOPMENT_TEAM = 762WF834XB;
 				INFOPLIST_FILE = Nano5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
