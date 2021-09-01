@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class TripsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
