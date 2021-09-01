@@ -16,7 +16,6 @@ extension TodoList {
         return NSFetchRequest<TodoList>(entityName: "TodoList")
     }
 
-    @NSManaged public var item: TodoItem?
     @NSManaged public var titulo: String?
     @NSManaged public var trip: Trip?
     @NSManaged public var todoItem: NSSet?

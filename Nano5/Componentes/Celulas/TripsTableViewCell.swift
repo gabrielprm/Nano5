@@ -9,6 +9,14 @@ import UIKit
 
 class TripsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var thumbImage: UIImageView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    @IBOutlet weak var favoriteButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,3 +29,4 @@ class TripsTableViewCell: UITableViewCell {
     }
     
 }
+
