@@ -10,9 +10,15 @@
         <attribute name="titulo" optional="YES" attributeType="String"/>
         <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Trip" inverseName="event" inverseEntity="Trip"/>
     </entity>
+    <entity name="TodoItem" representedClassName="TodoItem" syncable="YES">
+        <attribute name="isCompleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String"/>
+        <relationship name="todoList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TodoList" inverseName="todoItem" inverseEntity="TodoList"/>
+    </entity>
     <entity name="TodoList" representedClassName="TodoList" syncable="YES">
         <attribute name="item" optional="YES" attributeType="Transformable" customClassName="TodoItem"/>
         <attribute name="titulo" optional="YES" attributeType="String"/>
+        <relationship name="todoItem" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TodoItem" inverseName="todoList" inverseEntity="TodoItem"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="todoList" inverseEntity="Trip"/>
     </entity>
     <entity name="Trip" representedClassName="Trip" syncable="YES">
@@ -25,8 +31,9 @@
         <relationship name="todoList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TodoList" inverseName="trip" inverseEntity="TodoList"/>
     </entity>
     <elements>
-        <element name="Events" positionX="-36" positionY="45" width="128" height="149"/>
-        <element name="TodoList" positionX="-54" positionY="36" width="128" height="74"/>
-        <element name="Trip" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="Events" positionX="123.7197265625" positionY="-156.229736328125" width="128" height="149"/>
+        <element name="TodoList" positionX="-512.657470703125" positionY="-94.503173828125" width="128" height="103"/>
+        <element name="Trip" positionX="-267.4700317382812" positionY="-8.44171142578125" width="128" height="148"/>
+        <element name="TodoItem" positionX="-198" positionY="-18" width="128" height="74"/>
     </elements>
 </model>

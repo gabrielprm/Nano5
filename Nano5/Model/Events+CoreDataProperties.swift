@@ -2,7 +2,7 @@
 //  Events+CoreDataProperties.swift
 //  Nano5
 //
-//  Created by Johnny Camacho on 31/08/21.
+//  Created by Johnny Camacho on 01/09/21.
 //
 //
 
