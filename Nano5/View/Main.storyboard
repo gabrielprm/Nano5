@@ -384,7 +384,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="PFM-hD-mLF">
                                 <rect key="frame" x="0.0" y="79" width="390" height="711"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoItemCell" id="wcu-Fw-6yp" customClass="CheckListsTableViewCell" customModule="Nano5" customModuleProvider="target">
                                         <rect key="frame" x="20" y="49" width="350" height="43.666667938232422"/>
@@ -393,26 +393,26 @@
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.90206140280000002" green="0.92558223009999996" blue="0.91764694449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luggage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeN-dJ-dY7">
-                                <rect key="frame" x="43" y="28" width="151" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luggage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XeN-dJ-dY7">
+                                <rect key="frame" x="20" y="28" width="151" height="43"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" red="0.078428693120000004" green="0.078432418409999996" blue="0.082568772139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMJ-1D-jGi">
-                                <rect key="frame" x="315" y="38" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMJ-1D-jGi">
+                                <rect key="frame" x="340" y="38" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="sLQ-8l-T1k"/>
+                                    <constraint firstAttribute="height" constant="30" id="wsY-kw-Ap0"/>
+                                </constraints>
                                 <state key="normal" image="plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                 </state>
                                 <connections>
-                                    <action selector="addItemButton:" destination="6we-sD-vRM" eventType="touchUpInside" id="Bbc-O5-4jh"/>
-                                    <segue destination="wCS-c8-dZ9" kind="popoverPresentation" popoverAnchorView="KMJ-1D-jGi" id="8Ey-7W-wCM">
+                                    <segue destination="wCS-c8-dZ9" kind="popoverPresentation" identifier="NewToDoItemSegueIdentifier" popoverAnchorView="KMJ-1D-jGi" id="8Ey-7W-wCM">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -420,6 +420,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HND-fI-CYx"/>
                         <color key="backgroundColor" red="0.90159499649999997" green="0.92566186189999999" blue="0.91726809740000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KMJ-1D-jGi" firstAttribute="centerY" secondItem="vT3-C7-0ak" secondAttribute="centerY" constant="-342" id="Xwj-m5-cAH"/>
+                            <constraint firstItem="XeN-dJ-dY7" firstAttribute="centerY" secondItem="vT3-C7-0ak" secondAttribute="centerY" constant="-345.5" id="YdE-xG-8I9"/>
+                            <constraint firstItem="XeN-dJ-dY7" firstAttribute="leading" secondItem="HND-fI-CYx" secondAttribute="leading" constant="20" id="fBW-fS-BoF"/>
+                            <constraint firstItem="HND-fI-CYx" firstAttribute="trailing" secondItem="KMJ-1D-jGi" secondAttribute="trailing" constant="20" id="jOi-19-7vM"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="todoItemTableView" destination="PFM-hD-mLF" id="z0s-K0-WUt"/>
@@ -453,10 +459,10 @@
             </objects>
             <point key="canvasLocation" x="2823" y="-7"/>
         </scene>
-        <!--View Controller-->
+        <!--New To Do Item View Controller-->
         <scene sceneID="Erb-2t-C1X">
             <objects>
-                <viewController id="wCS-c8-dZ9" sceneMemberID="viewController">
+                <viewController id="wCS-c8-dZ9" customClass="NewToDoItemViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R79-tc-vOM">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -513,11 +519,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="didTapSave:" destination="wCS-c8-dZ9" eventType="touchUpInside" id="Jh2-V5-z2K"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2JE-Jb-FlQ"/>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="titleField" destination="8PZ-MS-2nS" id="kDt-gR-hzP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kY5-tz-lJr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

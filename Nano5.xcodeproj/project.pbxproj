@@ -38,6 +38,7 @@
 		BA50EC6A26DD611900FB2C03 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC6826DD611900FB2C03 /* EventsTableViewCell.xib */; };
 		BA50EC7126DD936900FB2C03 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50EC6F26DD936900FB2C03 /* ToDoTableViewCell.swift */; };
 		BA50EC7226DD936900FB2C03 /* ToDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC7026DD936900FB2C03 /* ToDoTableViewCell.xib */; };
+		BA50EC7426E157B600FB2C03 /* NewToDoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50EC7326E157B500FB2C03 /* NewToDoItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		BA50EC6826DD611900FB2C03 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
 		BA50EC6F26DD936900FB2C03 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		BA50EC7026DD936900FB2C03 /* ToDoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoTableViewCell.xib; sourceTree = "<group>"; };
+		BA50EC7326E157B500FB2C03 /* NewToDoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				B2163D0726E067C100FE3796 /* TodoListViewController.swift */,
 				89E0D0FD26E104A7009E43DA /* NewTodoListViewController.swift */,
 				89E0D10026E13DF5009E43DA /* TodoItemViewController.swift */,
+				BA50EC7326E157B500FB2C03 /* NewToDoItemViewController.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E950AD26DFF82200C23B6C /* TodoItem+CoreDataClass.swift in Sources */,
+				BA50EC7426E157B600FB2C03 /* NewToDoItemViewController.swift in Sources */,
 				BA50EC5B26DD543200FB2C03 /* TripsTableViewCell.swift in Sources */,
 				89E0D0FE26E104A7009E43DA /* NewTodoListViewController.swift in Sources */,
 				89E0D10126E13DF5009E43DA /* TodoItemViewController.swift in Sources */,

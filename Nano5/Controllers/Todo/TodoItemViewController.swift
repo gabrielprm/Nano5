@@ -18,10 +18,13 @@ class TodoItemViewController: UIViewController {
      
     var todoItem: [TodoItem]?
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     //MARK: --Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchToDo()
         let nib = UINib(nibName: "CheckListsTableViewCell", bundle: nil)
         
         todoItemTableView.register(nib, forCellReuseIdentifier: "ToDoItemCell")
@@ -33,12 +36,27 @@ class TodoItemViewController: UIViewController {
         configureUI()
     }
     
+    //MARK: --Helpers
+    
     func configureUI() {
         todoListTitle.text = todoList.titulo
     }
+    func fetchToDo() {
+        self.todoItem = todoList.todoItem!.allObjects as? [TodoItem]
+        
+        DispatchQueue.main.async {
+            self.todoItemTableView.reloadData()
+        }
+    }
     
-    //MARK: --Helpers
-    @IBAction func addItemButton(_ sender: Any) {
+    func saveTodo() {
+
+        do {
+            try self.context.save()
+        } catch {
+            fatalError("Error Saving Trips")
+        }
+        
     }
 }
 
@@ -68,8 +86,19 @@ extension TodoItemViewController: UITableViewDataSource {
         let todoCell = self.todoItem![indexPath.section]
         
         cell.cellTitle.text = todoCell.titulo
+        cell.tableView = self
+        cell.todoItem = todoCell
+        cell.checkButton.isSelected = todoCell.isCompleted
         
         return cell
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "NewToDoItemSegueIdentifier",
+           let destination = segue.destination as? NewToDoItemViewController {
+            
+            destination.todoItemViewControler = self
+        }
     }
 }

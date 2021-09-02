@@ -123,6 +123,7 @@ extension TodoListViewController: UITableViewDelegate {
         
         let todoList = todoList![indexPath.section]
         
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "TodoItemList", sender: todoList)
         
     }

@@ -9,7 +9,10 @@ import UIKit
 
 class CheckListsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var checkButton: UIButton!
     @IBOutlet var cellTitle: UILabel!
+    var tableView: TodoItemViewController!
+    var todoItem: TodoItem!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +26,9 @@ class CheckListsTableViewCell: UITableViewCell {
     }
     
     @IBAction func checkButton(_ sender: Any) {
-        
+        todoItem.isCompleted = !todoItem.isCompleted
+        checkButton.isSelected = todoItem.isCompleted
+        tableView.saveTodo()
+        tableView.fetchToDo()
     }
 }

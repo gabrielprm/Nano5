@@ -37,7 +37,6 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <color key="tintColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -46,14 +45,11 @@
                 </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.84705882352941175" green="0.8666666666666667" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <color key="tintColor" name="AccentColor"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                    <integer key="value" value="20"/>
-                </userDefinedRuntimeAttribute>
-            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="cellTitle" destination="aUr-cr-GfM" id="tLt-Ea-kpy"/>
+                <outlet property="checkButton" destination="Kbj-9n-5P5" id="yQh-be-lio"/>
             </connections>
             <point key="canvasLocation" x="132" y="111"/>
         </tableViewCell>
