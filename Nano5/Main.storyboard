@@ -260,7 +260,7 @@
                                     </connections>
                                 </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BOg-da-hWa" customClass="ToDoTableViewCell" customModule="Nano5" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="toDoCell" id="BOg-da-hWa" customClass="ToDoTableViewCell" customModule="Nano5" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BOg-da-hWa" id="VeC-2S-cIC" customClass="ToDoTableViewCell" customModule="Nano5" customModuleProvider="target">
@@ -278,7 +278,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fbv-us-WuZ" kind="popoverPresentation" popoverAnchorView="mXJ-Yk-zaj" id="Iob-Mf-hSe">
+                                    <segue destination="fbv-us-WuZ" kind="popoverPresentation" identifier="NewTodoListSegueIdentifier" popoverAnchorView="mXJ-Yk-zaj" id="Iob-Mf-hSe">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -300,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="3870.7692307692305" y="-422.27488151658764"/>
         </scene>
-        <!--View Controller-->
+        <!--New Todo List View Controller-->
         <scene sceneID="WBD-8P-sSe">
             <objects>
-                <viewController id="fbv-us-WuZ" sceneMemberID="viewController">
+                <viewController id="fbv-us-WuZ" customClass="NewTodoListViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LQz-fa-Ioz">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,13 +360,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="todoListSaveButton:" destination="fbv-us-WuZ" eventType="touchUpInside" id="gHc-Io-Vm6"/>
+                                    <action selector="todoListSaveButton:" destination="mvr-v4-xTH" eventType="touchUpInside" id="zTm-Ro-n2r"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qy0-gp-bJ9"/>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="todoListDescription" destination="cGk-Zb-aFV" id="9hy-aj-fxg"/>
+                        <outlet property="todoListTitle" destination="fZS-aH-3J0" id="mgQ-8d-mep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7f-OI-Jpv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mvr-v4-xTH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4705" y="-829"/>
         </scene>
@@ -383,7 +392,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wcu-Fw-6yp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="toDoItemCell" id="wcu-Fw-6yp">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wcu-Fw-6yp" id="MJo-Gq-Bkm" customClass="CheckListsTableViewCell" customModule="Nano5" customModuleProvider="target">
@@ -588,7 +597,6 @@
                         <outlet property="chegadaDatePicker" destination="2qL-o3-jPd" id="rmi-aK-9Dt"/>
                         <outlet property="cityTextField" destination="hZZ-8A-9DV" id="GK0-XJ-cNi"/>
                         <outlet property="saidaDatePicker" destination="UbR-Vh-iUW" id="Qmr-XB-fxn"/>
-                        <outlet property="saveButton" destination="r4c-fY-3u2" id="Mcq-9t-1ov"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4QY-P7-5MQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -34,6 +34,7 @@ class TripViewController: UIViewController {
     }
     
     func fetchTrips() {
+        
         do {
             let request = Trip.fetchRequest() as NSFetchRequest<Trip>
             
@@ -42,22 +43,27 @@ class TripViewController: UIViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+            
         } catch {
-            fatalError("Deu doidera.")
+            fatalError("Error fetching trips.")
         }
+        
     }
     
     func saveTrips() {
+
         do {
             try self.context.save()
         } catch {
-            fatalError("Ish.")
+            fatalError("Error saving trips.")
         }
-        
+
         self.fetchTrips()
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == Self.newTripSegueIdentifier,
            let destination = segue.destination as? NewTripViewController {
             
@@ -68,6 +74,7 @@ class TripViewController: UIViewController {
 
             destination.configure(trip)
         }
+        
     }
     
 }
@@ -92,7 +99,7 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
     // Read Trip.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TripsTableViewCell.tripCellIdentifier, for: indexPath) as? TripsTableViewCell else {
-            fatalError("Deu doidera dnv.")
+            fatalError("Error reading cell")
         }
         
         let trip = trips![indexPath.section]
@@ -155,15 +162,5 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
         
         return UISwipeActionsConfiguration(actions: [delete])
     }
-    
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            let personToRemove = self.trips![indexPath.section]
-//
-//            self.context.delete(personToRemove)
-//
-//            self.saveTrips()
-//        }
-//    }
     
 }

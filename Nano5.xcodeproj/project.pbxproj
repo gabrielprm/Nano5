@@ -13,6 +13,7 @@
 		8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */; };
 		8977D8C826DD4A7600FEF577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C726DD4A7600FEF577 /* Assets.xcassets */; };
 		8977D8CB26DD4A7600FEF577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C926DD4A7600FEF577 /* LaunchScreen.storyboard */; };
+		89E0D0FE26E104A7009E43DA /* NewTodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0D0FD26E104A7009E43DA /* NewTodoListViewController.swift */; };
 		B2163D0826E067C100FE3796 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2163D0726E067C100FE3796 /* TodoListViewController.swift */; };
 		B2163D0A26E071FE00FE3796 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2163D0926E071FE00FE3796 /* TabBarController.swift */; };
 		B2163D0C26E07FAD00FE3796 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2163D0B26E07FAD00FE3796 /* EventsViewController.swift */; };
@@ -47,6 +48,7 @@
 		8977D8C726DD4A7600FEF577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8977D8CA26DD4A7600FEF577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8977D8CC26DD4A7600FEF577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89E0D0FD26E104A7009E43DA /* NewTodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoListViewController.swift; sourceTree = "<group>"; };
 		B2163D0726E067C100FE3796 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		B2163D0926E071FE00FE3796 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B2163D0B26E07FAD00FE3796 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -117,12 +119,12 @@
 		8977D8BA26DD4A7500FEF577 /* Nano5 */ = {
 			isa = PBXGroup;
 			children = (
-				B2E950B126E0461D00C23B6C /* View */,
 				892132DF26DEA33000737399 /* Model */,
+				B2E950B126E0461D00C23B6C /* View */,
+				BA50EC5E26DD5DE000FB2C03 /* Componentes */,
 				8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */,
 				8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */,
 				BA50EC5726DD4E4C00FB2C03 /* Main.storyboard */,
-				BA50EC5E26DD5DE000FB2C03 /* Componentes */,
 				8977D8C726DD4A7600FEF577 /* Assets.xcassets */,
 				8977D8C926DD4A7600FEF577 /* LaunchScreen.storyboard */,
 				8977D8CC26DD4A7600FEF577 /* Info.plist */,
@@ -137,6 +139,7 @@
 				8977D8BF26DD4A7500FEF577 /* TripViewController.swift */,
 				B2E950B226E0463D00C23B6C /* NewTripViewController.swift */,
 				B2163D0726E067C100FE3796 /* TodoListViewController.swift */,
+				89E0D0FD26E104A7009E43DA /* NewTodoListViewController.swift */,
 				B2163D0926E071FE00FE3796 /* TabBarController.swift */,
 				B2163D0B26E07FAD00FE3796 /* EventsViewController.swift */,
 				B2163D0D26E07FE300FE3796 /* FlightViewController.swift */,
@@ -244,6 +247,7 @@
 			files = (
 				B2E950AD26DFF82200C23B6C /* TodoItem+CoreDataClass.swift in Sources */,
 				BA50EC5B26DD543200FB2C03 /* TripsTableViewCell.swift in Sources */,
+				89E0D0FE26E104A7009E43DA /* NewTodoListViewController.swift in Sources */,
 				8977D8C026DD4A7500FEF577 /* TripViewController.swift in Sources */,
 				8977D8BC26DD4A7500FEF577 /* AppDelegate.swift in Sources */,
 				B2E950AE26DFF82200C23B6C /* TodoItem+CoreDataProperties.swift in Sources */,

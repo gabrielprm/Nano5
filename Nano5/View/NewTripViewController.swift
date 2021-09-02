@@ -11,8 +11,6 @@ class NewTripViewController: UIViewController {
     
     var tripsViewController: TripViewController!
     
-    @IBOutlet weak var saveButton: UIButton!
-    
     @IBOutlet weak var cityTextField: UITextField!
     
     @IBOutlet weak var chegadaDatePicker: UIDatePicker!
