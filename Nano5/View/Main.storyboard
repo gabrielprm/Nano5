@@ -250,16 +250,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" name="AccentColor"/>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nge-zF-XWJ">
-                                    <rect key="frame" x="0.0" y="110.66666793823242" width="390" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <connections>
-                                        <segue destination="6we-sD-vRM" kind="popoverPresentation" popoverAnchorView="Nge-zF-XWJ" id="FkU-0h-UUH">
-                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                        </segue>
-                                    </connections>
-                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" id="BOg-da-hWa" customClass="ToDoTableViewCell" customModule="Nano5" customModuleProvider="target">
                                         <rect key="frame" x="20" y="49" width="350" height="43.666667938232422"/>
@@ -269,6 +259,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="6we-sD-vRM" kind="presentation" identifier="TodoItemList" id="JJd-jA-KB1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -380,26 +373,27 @@
             </objects>
             <point key="canvasLocation" x="4705" y="-829"/>
         </scene>
-        <!--View Controller-->
+        <!--Todo Item View Controller-->
         <scene sceneID="uZR-Wt-6cf">
             <objects>
-                <viewController storyboardIdentifier="todoItemList" id="6we-sD-vRM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="todoItemList" id="6we-sD-vRM" customClass="TodoItemViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vT3-C7-0ak">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PFM-hD-mLF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="PFM-hD-mLF">
                                 <rect key="frame" x="0.0" y="79" width="390" height="711"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="toDoItemCell" id="wcu-Fw-6yp">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoItemCell" id="wcu-Fw-6yp" customClass="CheckListsTableViewCell" customModule="Nano5" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="49" width="350" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wcu-Fw-6yp" id="MJo-Gq-Bkm" customClass="CheckListsTableViewCell" customModule="Nano5" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.90206140280000002" green="0.92558223009999996" blue="0.91764694449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -417,6 +411,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                 </state>
                                 <connections>
+                                    <action selector="addItemButton:" destination="6we-sD-vRM" eventType="touchUpInside" id="Bbc-O5-4jh"/>
                                     <segue destination="wCS-c8-dZ9" kind="popoverPresentation" popoverAnchorView="KMJ-1D-jGi" id="8Ey-7W-wCM">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
@@ -426,6 +421,10 @@
                         <viewLayoutGuide key="safeArea" id="HND-fI-CYx"/>
                         <color key="backgroundColor" red="0.90159499649999997" green="0.92566186189999999" blue="0.91726809740000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="todoItemTableView" destination="PFM-hD-mLF" id="z0s-K0-WUt"/>
+                        <outlet property="todoListTitle" destination="XeN-dJ-dY7" id="6pS-pu-OTu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaT-XH-71A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

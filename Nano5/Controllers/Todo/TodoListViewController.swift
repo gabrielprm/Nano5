@@ -82,6 +82,11 @@ class TodoListViewController: UIViewController {
            let destination = segue.destination as? NewTodoListViewController {
             
             destination.todoListViewControler = self
+        } else if segue.identifier == "TodoItemList",
+                  let destination = segue.destination as? TodoItemViewController,
+                  let todoList = sender as? TodoList {
+
+            destination.todoList = todoList
         }
         
     }
@@ -116,15 +121,9 @@ extension TodoListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        tableView.deselectRow(at: indexPath, animated: true)
+        let todoList = todoList![indexPath.section]
         
-        let viewController = storyboard?.instantiateViewController(identifier: "todoItemList") as! TasksViewController
-        
-        viewController.title = titleTask[indexPath.row]
-        viewController.taskDescription = descriptionTask[indexPath.row]
-        viewController.taskIndex = indexPath.row
-        
-        navigationController?.pushViewController(viewController, animated: true)
+        performSegue(withIdentifier: "TodoItemList", sender: todoList)
         
     }
     
