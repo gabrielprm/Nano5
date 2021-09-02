@@ -118,6 +118,14 @@ extension TodoListViewController: UITableViewDelegate {
         
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let viewController = storyboard?.instantiateViewController(identifier: "todoItemList") as! TasksViewController
+        
+        viewController.title = titleTask[indexPath.row]
+        viewController.taskDescription = descriptionTask[indexPath.row]
+        viewController.taskIndex = indexPath.row
+        
+        navigationController?.pushViewController(viewController, animated: true)
+        
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
