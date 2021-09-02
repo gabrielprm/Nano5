@@ -9,10 +9,15 @@
 /* Begin PBXBuildFile section */
 		8977D8BC26DD4A7500FEF577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */; };
 		8977D8BE26DD4A7500FEF577 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */; };
-		8977D8C026DD4A7500FEF577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BF26DD4A7500FEF577 /* ViewController.swift */; };
+		8977D8C026DD4A7500FEF577 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BF26DD4A7500FEF577 /* TripViewController.swift */; };
 		8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */; };
 		8977D8C826DD4A7600FEF577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C726DD4A7600FEF577 /* Assets.xcassets */; };
 		8977D8CB26DD4A7600FEF577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C926DD4A7600FEF577 /* LaunchScreen.storyboard */; };
+		B2163D0826E067C100FE3796 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2163D0726E067C100FE3796 /* TodoListViewController.swift */; };
+		B2163D0A26E071FE00FE3796 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2163D0926E071FE00FE3796 /* TabBarController.swift */; };
+		B2163D0C26E07FAD00FE3796 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2163D0B26E07FAD00FE3796 /* EventsViewController.swift */; };
+		B2163D0E26E07FE300FE3796 /* FlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2163D0D26E07FE300FE3796 /* FlightViewController.swift */; };
+		B2163D1026E0802800FE3796 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2163D0F26E0802800FE3796 /* ProfileViewController.swift */; };
 		B2E950A926DFF82200C23B6C /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E950A126DFF82200C23B6C /* Trip+CoreDataClass.swift */; };
 		B2E950AA26DFF82200C23B6C /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E950A226DFF82200C23B6C /* Trip+CoreDataProperties.swift */; };
 		B2E950AB26DFF82200C23B6C /* TodoList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E950A326DFF82200C23B6C /* TodoList+CoreDataClass.swift */; };
@@ -21,6 +26,7 @@
 		B2E950AE26DFF82200C23B6C /* TodoItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E950A626DFF82200C23B6C /* TodoItem+CoreDataProperties.swift */; };
 		B2E950AF26DFF82200C23B6C /* Events+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E950A726DFF82200C23B6C /* Events+CoreDataClass.swift */; };
 		B2E950B026DFF82200C23B6C /* Events+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E950A826DFF82200C23B6C /* Events+CoreDataProperties.swift */; };
+		B2E950B326E0463D00C23B6C /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E950B226E0463D00C23B6C /* NewTripViewController.swift */; };
 		BA50EC5826DD4E4C00FB2C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC5726DD4E4C00FB2C03 /* Main.storyboard */; };
 		BA50EC5B26DD543200FB2C03 /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA50EC5926DD543200FB2C03 /* TripsTableViewCell.swift */; };
 		BA50EC5C26DD543200FB2C03 /* TripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA50EC5A26DD543200FB2C03 /* TripsTableViewCell.xib */; };
@@ -36,11 +42,16 @@
 		8977D8B826DD4A7500FEF577 /* Nano5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8977D8BF26DD4A7500FEF577 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8977D8BF26DD4A7500FEF577 /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		8977D8C526DD4A7500FEF577 /* Nano5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nano5.xcdatamodel; sourceTree = "<group>"; };
 		8977D8C726DD4A7600FEF577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8977D8CA26DD4A7600FEF577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8977D8CC26DD4A7600FEF577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2163D0726E067C100FE3796 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		B2163D0926E071FE00FE3796 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B2163D0B26E07FAD00FE3796 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		B2163D0D26E07FE300FE3796 /* FlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewController.swift; sourceTree = "<group>"; };
+		B2163D0F26E0802800FE3796 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B2E950A126DFF82200C23B6C /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B2E950A226DFF82200C23B6C /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2E950A326DFF82200C23B6C /* TodoList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoList+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -49,6 +60,7 @@
 		B2E950A626DFF82200C23B6C /* TodoItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2E950A726DFF82200C23B6C /* Events+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B2E950A826DFF82200C23B6C /* Events+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B2E950B226E0463D00C23B6C /* NewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 		BA50EC5726DD4E4C00FB2C03 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BA50EC5926DD543200FB2C03 /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		BA50EC5A26DD543200FB2C03 /* TripsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripsTableViewCell.xib; sourceTree = "<group>"; };
@@ -105,10 +117,10 @@
 		8977D8BA26DD4A7500FEF577 /* Nano5 */ = {
 			isa = PBXGroup;
 			children = (
+				B2E950B126E0461D00C23B6C /* View */,
 				892132DF26DEA33000737399 /* Model */,
 				8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */,
 				8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */,
-				8977D8BF26DD4A7500FEF577 /* ViewController.swift */,
 				BA50EC5726DD4E4C00FB2C03 /* Main.storyboard */,
 				BA50EC5E26DD5DE000FB2C03 /* Componentes */,
 				8977D8C726DD4A7600FEF577 /* Assets.xcassets */,
@@ -117,6 +129,20 @@
 				8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */,
 			);
 			path = Nano5;
+			sourceTree = "<group>";
+		};
+		B2E950B126E0461D00C23B6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8977D8BF26DD4A7500FEF577 /* TripViewController.swift */,
+				B2E950B226E0463D00C23B6C /* NewTripViewController.swift */,
+				B2163D0726E067C100FE3796 /* TodoListViewController.swift */,
+				B2163D0926E071FE00FE3796 /* TabBarController.swift */,
+				B2163D0B26E07FAD00FE3796 /* EventsViewController.swift */,
+				B2163D0D26E07FE300FE3796 /* FlightViewController.swift */,
+				B2163D0F26E0802800FE3796 /* ProfileViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BA50EC5D26DD5DCE00FB2C03 /* Celulas */ = {
@@ -218,17 +244,23 @@
 			files = (
 				B2E950AD26DFF82200C23B6C /* TodoItem+CoreDataClass.swift in Sources */,
 				BA50EC5B26DD543200FB2C03 /* TripsTableViewCell.swift in Sources */,
-				8977D8C026DD4A7500FEF577 /* ViewController.swift in Sources */,
+				8977D8C026DD4A7500FEF577 /* TripViewController.swift in Sources */,
 				8977D8BC26DD4A7500FEF577 /* AppDelegate.swift in Sources */,
 				B2E950AE26DFF82200C23B6C /* TodoItem+CoreDataProperties.swift in Sources */,
 				BA50EC7126DD936900FB2C03 /* ToDoTableViewCell.swift in Sources */,
+				B2163D1026E0802800FE3796 /* ProfileViewController.swift in Sources */,
+				B2163D0826E067C100FE3796 /* TodoListViewController.swift in Sources */,
 				B2E950AF26DFF82200C23B6C /* Events+CoreDataClass.swift in Sources */,
+				B2163D0E26E07FE300FE3796 /* FlightViewController.swift in Sources */,
 				BA50EC6926DD611900FB2C03 /* EventsTableViewCell.swift in Sources */,
+				B2163D0C26E07FAD00FE3796 /* EventsViewController.swift in Sources */,
 				B2E950AB26DFF82200C23B6C /* TodoList+CoreDataClass.swift in Sources */,
 				8977D8BE26DD4A7500FEF577 /* SceneDelegate.swift in Sources */,
 				B2E950B026DFF82200C23B6C /* Events+CoreDataProperties.swift in Sources */,
 				BA50EC6526DD5F5900FB2C03 /* CheckListsTableViewCell.swift in Sources */,
+				B2163D0A26E071FE00FE3796 /* TabBarController.swift in Sources */,
 				B2E950A926DFF82200C23B6C /* Trip+CoreDataClass.swift in Sources */,
+				B2E950B326E0463D00C23B6C /* NewTripViewController.swift in Sources */,
 				B2E950AA26DFF82200C23B6C /* Trip+CoreDataProperties.swift in Sources */,
 				8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */,
 				B2E950AC26DFF82200C23B6C /* TodoList+CoreDataProperties.swift in Sources */,

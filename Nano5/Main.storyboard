@@ -13,7 +13,7 @@
         <!--Trips-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="TripViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,14 +29,6 @@
                                     <color key="textColor" red="0.051160596310000001" green="0.050849549469999998" blue="0.1165218428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JAZ-0A-QuB">
-                                    <rect key="frame" x="0.0" y="199.66666793823242" width="390" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <connections>
-                                        <segue destination="Hzi-hS-A5S" kind="presentation" modalPresentationStyle="fullScreen" id="yOw-lw-S3r"/>
-                                    </connections>
-                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripsCells" id="s9U-Yz-krc" customClass="TripsTableViewCell" customModule="Nano5" customModuleProvider="target">
                                         <rect key="frame" x="20" y="138" width="350" height="43.666667938232422"/>
@@ -45,6 +37,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Hzi-hS-A5S" kind="presentation" identifier="TabBarSegueIdentifier" modalPresentationStyle="fullScreen" id="mpe-wF-Qod"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -57,7 +52,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                 </state>
                                 <connections>
-                                    <segue destination="g19-Ua-oFF" kind="popoverPresentation" popoverAnchorView="mJL-HI-mZH" id="hUX-kb-AYY">
+                                    <segue destination="g19-Ua-oFF" kind="popoverPresentation" identifier="NewTripSegueIdentifier" popoverAnchorView="mJL-HI-mZH" id="hUX-kb-AYY">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -77,7 +72,7 @@
         <!--Flight-->
         <scene sceneID="fCR-56-fbz">
             <objects>
-                <viewController id="yfh-A6-fe3" sceneMemberID="viewController">
+                <viewController id="yfh-A6-fe3" customClass="FlightViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lki-R6-Jpf">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,7 +108,7 @@
         <!--Profile-->
         <scene sceneID="dap-ll-YeP">
             <objects>
-                <viewController id="Gno-rt-WqZ" sceneMemberID="viewController">
+                <viewController id="Gno-rt-WqZ" customClass="ProfileViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UpG-zq-B8k">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +177,7 @@
         <!--Events-->
         <scene sceneID="2aH-pd-LNe">
             <objects>
-                <viewController id="dqv-fp-c1V" sceneMemberID="viewController">
+                <viewController id="dqv-fp-c1V" customClass="EventsViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o2L-70-1ar">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -223,20 +218,20 @@
         <!--To Do Lists-->
         <scene sceneID="5h4-ZH-Gda">
             <objects>
-                <viewController id="wTM-bi-LxI" sceneMemberID="viewController">
+                <viewController id="wTM-bi-LxI" customClass="TodoListViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KOx-07-Kr6">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0e-1u-ypI">
-                                <rect key="frame" x="20" y="115" width="45" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0e-1u-ypI">
+                                <rect key="frame" x="20" y="115" width="340" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Destino" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbM-Vj-tO4">
-                                <rect key="frame" x="20" y="64" width="132" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Destino" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbM-Vj-tO4">
+                                <rect key="frame" x="20" y="64" width="340" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -295,10 +290,15 @@
                     <tabBarItem key="tabBarItem" title="To Do Lists" id="7td-Ab-bxf">
                         <imageReference key="image" image="note" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="T0e-1u-ypI" id="L8T-FK-AbM"/>
+                        <outlet property="destinoLabel" destination="FbM-Vj-tO4" id="RWz-OF-N4e"/>
+                        <outlet property="tableView" destination="XeD-O7-Old" id="E1z-dO-zcL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EJ-57-mYL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3871" y="-422"/>
+            <point key="canvasLocation" x="3870.7692307692305" y="-422.27488151658764"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WBD-8P-sSe">
@@ -424,7 +424,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="tiU-Sm-bgN">
             <objects>
-                <tabBarController id="Hzi-hS-A5S" sceneMemberID="viewController">
+                <tabBarController id="Hzi-hS-A5S" customClass="TabBarController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="SKX-aA-804"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a3I-yb-XIY">
@@ -514,10 +514,10 @@
             </objects>
             <point key="canvasLocation" x="5666" y="-149"/>
         </scene>
-        <!--View Controller-->
+        <!--New Trip View Controller-->
         <scene sceneID="Lzc-EP-OBH">
             <objects>
-                <viewController id="g19-Ua-oFF" sceneMemberID="viewController">
+                <viewController id="g19-Ua-oFF" customClass="NewTripViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4QG-1c-npI">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -529,6 +529,15 @@
                                 <color key="textColor" red="0.051160596310000001" green="0.050849549469999998" blue="0.1165218428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4c-fY-3u2">
+                                <rect key="frame" x="315" y="72" width="39" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="g19-Ua-oFF" eventType="touchUpInside" id="ibW-yq-dOi"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Destino:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLN-Xs-aAa">
                                 <rect key="frame" x="43" y="144" width="95" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -549,38 +558,38 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saída:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-nN-7xb">
-                                <rect key="frame" x="43" y="249" width="71" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" red="0.051160596310000001" green="0.050849549469999998" blue="0.1165218428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4c-fY-3u2">
-                                <rect key="frame" x="315" y="72" width="39" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Save"/>
-                            </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="UbR-Vh-iUW">
-                                <rect key="frame" x="43" y="277" width="311" height="86"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chegada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKg-Ie-gjy">
-                                <rect key="frame" x="40" y="371" width="110" height="29"/>
+                                <rect key="frame" x="43" y="249" width="110" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="0.051160596310000001" green="0.050849549469999998" blue="0.1165218428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="2qL-o3-jPd">
-                                <rect key="frame" x="40" y="399" width="311" height="86"/>
+                                <rect key="frame" x="43" y="277" width="311" height="86"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saída:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-nN-7xb">
+                                <rect key="frame" x="43" y="371" width="71" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.051160596310000001" green="0.050849549469999998" blue="0.1165218428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="UbR-Vh-iUW">
+                                <rect key="frame" x="43" y="399" width="311" height="86"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9K8-72-WE2"/>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="chegadaDatePicker" destination="2qL-o3-jPd" id="rmi-aK-9Dt"/>
+                        <outlet property="cityTextField" destination="hZZ-8A-9DV" id="GK0-XJ-cNi"/>
+                        <outlet property="saidaDatePicker" destination="UbR-Vh-iUW" id="Qmr-XB-fxn"/>
+                        <outlet property="saveButton" destination="r4c-fY-3u2" id="Mcq-9t-1ov"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4QY-P7-5MQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

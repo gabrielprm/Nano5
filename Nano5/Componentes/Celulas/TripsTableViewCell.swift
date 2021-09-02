@@ -8,6 +8,8 @@
 import UIKit
 
 class TripsTableViewCell: UITableViewCell {
+    
+    static let tripCellIdentifier = "TripsCells"
 
     @IBOutlet weak var thumbImage: UIImageView!
     
