@@ -29,11 +29,14 @@ class TodoListViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let nib = UINib(nibName: "ToDoTableViewCell", bundle: nil)
+        
+        tableView.register(nib, forCellReuseIdentifier: "ToDoCell")
+        
         tableView.dataSource = self
         tableView.delegate = self
         
-        fetchToDo()
-        
+        tableView.rowHeight = tableView.dequeueReusableCell(withIdentifier: "ToDoCell")!.bounds.height
     }
     
     //MARK: --Helpers
@@ -52,24 +55,19 @@ class TodoListViewController: UIViewController {
         
         dateLabel.text = "\(dateChegada) - \(dateSaida)"
         
+        fetchToDo()
     }
     
     func fetchToDo() {
+        self.todoList = trip.todoList!.allObjects as? [TodoList] // or as!
         
-        do {
-            self.todoList = trip.todoList as? Array<TodoList>
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        } catch {
-            fatalError("Error fetching To-do List")
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
-        
     }
     
     func saveTodo() {
-        
+
         do {
             try self.context.save()
         } catch {
@@ -92,30 +90,40 @@ class TodoListViewController: UIViewController {
 //MARK: --Extensions
 extension TodoListViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return todoList?.count ?? 0
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath) as? ToDoTableViewCell else {
+            fatalError("ERROR fetching data.")
+        }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "toDoCell", for: indexPath)
-        let todoCell = self.todoList![indexPath.row]
-        cell.textLabel?.text = todoCell.titulo
+        let todoCell = self.todoList![indexPath.section]
+        
+        cell.todoListLabel.text = todoCell.titulo
+        
         return cell
-        
     }
     
 }
 
 extension TodoListViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Delete" ) { (action, view, completionHandler) in
             
-            let listToDelete = self.todoList![indexPath.row]
+            let listToDelete = self.todoList![indexPath.section]
             
             self.context.delete(listToDelete)
             

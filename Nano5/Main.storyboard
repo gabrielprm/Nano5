@@ -37,6 +37,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="Hzi-hS-A5S" kind="presentation" identifier="TabBarSegueIdentifier" modalPresentationStyle="fullScreen" id="mpe-wF-Qod"/>
                                         </connections>
@@ -244,13 +245,13 @@
                                 <color key="textColor" red="0.50588235294117645" green="0.53333333333333333" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XeD-O7-Old">
-                                <rect key="frame" x="0.0" y="219" width="414" height="677"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="XeD-O7-Old">
+                                <rect key="frame" x="0.0" y="219" width="390" height="625"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" name="AccentColor"/>
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Nge-zF-XWJ">
-                                    <rect key="frame" x="0.0" y="92.333336223255515" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="110.66666793823242" width="390" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <connections>
@@ -260,14 +261,14 @@
                                     </connections>
                                 </button>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="toDoCell" id="BOg-da-hWa" customClass="ToDoTableViewCell" customModule="Nano5" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" id="BOg-da-hWa" customClass="ToDoTableViewCell" customModule="Nano5" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="49" width="350" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BOg-da-hWa" id="VeC-2S-cIC" customClass="ToDoTableViewCell" customModule="Nano5" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.90196078430000004" green="0.92549019610000005" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

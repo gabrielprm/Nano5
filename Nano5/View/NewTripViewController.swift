@@ -40,13 +40,7 @@ class NewTripViewController: UIViewController {
         trip.dataChegada = chegadaDatePicker.date
         trip.dataSaida = saidaDatePicker.date
         
-        do {
-            try self.tripsViewController.context.save()
-        } catch {
-            fatalError("Deu ruim.")
-        }
-        
-        tripsViewController.fetchTrips()
+        tripsViewController.saveTrips()
         
         dismiss(animated: true, completion: nil)
     }

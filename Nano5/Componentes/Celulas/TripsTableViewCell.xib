@@ -32,6 +32,10 @@
                         <state key="normal" image="heart" catalog="system">
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                         </state>
+                        <state key="selected" image="heart.fill" catalog="system"/>
+                        <connections>
+                            <action selector="favoriteTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0yG-PR-ths"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="natural" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogs-my-S2A">
                         <rect key="frame" x="114" y="12" width="180" height="22"/>
@@ -65,5 +69,6 @@
     <resources>
         <image name="akar-icons_home" width="30" height="30.5"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
     </resources>
 </document>
