@@ -74,7 +74,24 @@ class TripViewController: UIViewController {
 
             destination.configure(trip)
         }
+    }
+    
+    func requestImage(cell: TripsTableViewCell) {
+        let url = URL(string: "https://api.unsplash.com/photos/random/?client_id=MhhlHI6wOceOY7nYiKoAwqZgUVtuw_IFdxrBE8BOEM0%22")!
+        let sessionTask = URLSession.shared
+        let request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
         
+        let task = sessionTask.dataTask(with: request, completionHandler: { (data, response, error) in
+            if (error == nil) {
+                DispatchQueue.global(qos: .background).async {
+                    DispatchQueue.main.async {
+                        cell.thumbImage.image = UIImage(data: data!)!
+                    }
+                }
+            }
+        })
+        
+        task.resume()
     }
     
 }
