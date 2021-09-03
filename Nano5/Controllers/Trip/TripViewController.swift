@@ -76,24 +76,6 @@ class TripViewController: UIViewController {
         }
     }
     
-    func requestImage(cell: TripsTableViewCell) {
-        let url = URL(string: "https://api.unsplash.com/photos/random/?client_id=MhhlHI6wOceOY7nYiKoAwqZgUVtuw_IFdxrBE8BOEM0%22")!
-        let sessionTask = URLSession.shared
-        let request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
-        
-        let task = sessionTask.dataTask(with: request, completionHandler: { (data, response, error) in
-            if (error == nil) {
-                DispatchQueue.global(qos: .background).async {
-                    DispatchQueue.main.async {
-                        cell.thumbImage.image = UIImage(data: data!)!
-                    }
-                }
-            }
-        })
-        
-        task.resume()
-    }
-    
 }
 
 extension TripViewController: UITableViewDataSource, UITableViewDelegate {
@@ -129,7 +111,9 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.titleLabel.text = trip.cidade
         cell.dateLabel.text = "\(dateChegada) - \(dateSaida)"
-        cell.thumbImage.image = UIImage(named: "Rectangle 27")
+        cell.thumbImage.image = UIImage()
+        
+        Unsplash.requestImage(cell: cell)
         
         return cell
     }
