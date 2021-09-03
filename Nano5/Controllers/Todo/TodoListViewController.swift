@@ -41,6 +41,12 @@ class TodoListViewController: UIViewController {
     
     //MARK: --Helpers
     
+    @IBAction func didTapBackButton(_ sender: Any) {
+        let viewController = storyboard?.instantiateViewController(identifier: "trips") as! TripViewController
+        
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
     func configure(tabBarController: TabBarController) {
         
         self.trip = tabBarController.trip
@@ -92,6 +98,8 @@ class TodoListViewController: UIViewController {
     }
     
 }
+
+
 //MARK: --Extensions
 extension TodoListViewController: UITableViewDataSource {
     

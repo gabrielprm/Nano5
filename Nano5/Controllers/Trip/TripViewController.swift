@@ -76,6 +76,10 @@ class TripViewController: UIViewController {
         }
     }
     
+    func configureUI() {
+        tabBarController?.tabBar.isHidden = true
+    }
+    
 }
 
 extension TripViewController: UITableViewDataSource, UITableViewDelegate {

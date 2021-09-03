@@ -13,7 +13,7 @@
         <!--Trips-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TripViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="trips" id="Y6W-OH-hqX" customClass="TripViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,6 +278,14 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGu-Rq-HDn">
+                                <rect key="frame" x="269" y="70" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="wTM-bi-LxI" eventType="touchUpInside" id="PFc-T1-9Pk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lO5-zf-tCr"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -440,6 +448,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="tiU-Sm-bgN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zl0-SP-ivi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="Hzi-hS-A5S" customClass="TabBarController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="SKX-aA-804"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -456,7 +465,6 @@
                         <segue destination="Gno-rt-WqZ" kind="relationship" relationship="viewControllers" id="wdC-uZ-35v"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zl0-SP-ivi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2823" y="-7"/>
         </scene>
