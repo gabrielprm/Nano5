@@ -17,6 +17,11 @@ class CheckListsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(named: "AccentColor")
+        
+        selectedBackgroundView = backgroundView
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

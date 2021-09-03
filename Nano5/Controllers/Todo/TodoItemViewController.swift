@@ -64,7 +64,7 @@ class TodoItemViewController: UIViewController {
 
 extension TodoItemViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -79,7 +79,7 @@ extension TodoItemViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath) as? CheckListsTableViewCell  else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath) as? CheckListsTableViewCell else {
             fatalError("Error dequeing cell")
         }
         
