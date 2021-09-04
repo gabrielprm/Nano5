@@ -22,7 +22,6 @@ struct Url: Codable {
 extension Unsplash {
     
     static func requestImage(cell: TripsTableViewCell) {
-//        let city = "Rio%20De%20Janeiro"
         var city = cell.titleLabel.text!
         
         city = city.replacingOccurrences(of: " ", with: "%20")
@@ -42,8 +41,8 @@ extension Unsplash {
 
             do {
                 result = try JSONDecoder().decode(Unsplash.self, from: data)
-            } catch {
-                print("Erro 2")
+            } catch let error {
+                print("Error: \(error)")
             }
 
             guard let json = result else {

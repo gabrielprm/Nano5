@@ -21,6 +21,7 @@
 		B2163D0E26E07FE300FE3796 /* FlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2163D0D26E07FE300FE3796 /* FlightViewController.swift */; };
 		B2163D1026E0802800FE3796 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2163D0F26E0802800FE3796 /* ProfileViewController.swift */; };
 		B25D6EB526E1894D00A8CE80 /* Unsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25D6EB426E1894D00A8CE80 /* Unsplash.swift */; };
+		B2A6D32026E2AA9500E1E5F7 /* SerpApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6D31F26E2AA9500E1E5F7 /* SerpApi.swift */; };
 		B2E950A926DFF82200C23B6C /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E950A126DFF82200C23B6C /* Trip+CoreDataClass.swift */; };
 		B2E950AA26DFF82200C23B6C /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E950A226DFF82200C23B6C /* Trip+CoreDataProperties.swift */; };
 		B2E950AB26DFF82200C23B6C /* TodoList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E950A326DFF82200C23B6C /* TodoList+CoreDataClass.swift */; };
@@ -59,6 +60,7 @@
 		B2163D0D26E07FE300FE3796 /* FlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightViewController.swift; sourceTree = "<group>"; };
 		B2163D0F26E0802800FE3796 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B25D6EB426E1894D00A8CE80 /* Unsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsplash.swift; sourceTree = "<group>"; };
+		B2A6D31F26E2AA9500E1E5F7 /* SerpApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerpApi.swift; sourceTree = "<group>"; };
 		B2E950A126DFF82200C23B6C /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B2E950A226DFF82200C23B6C /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B2E950A326DFF82200C23B6C /* TodoList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoList+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				B25D6EB426E1894D00A8CE80 /* Unsplash.swift */,
+				B2A6D31F26E2AA9500E1E5F7 /* SerpApi.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -214,9 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				BA50EC5926DD543200FB2C03 /* TripsTableViewCell.swift */,
+				BA50EC6F26DD936900FB2C03 /* ToDoTableViewCell.swift */,
 				BA50EC6326DD5F5900FB2C03 /* CheckListsTableViewCell.swift */,
 				BA50EC6726DD611900FB2C03 /* EventsTableViewCell.swift */,
-				BA50EC6F26DD936900FB2C03 /* ToDoTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				B2E950AA26DFF82200C23B6C /* Trip+CoreDataProperties.swift in Sources */,
 				8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */,
 				B2E950AC26DFF82200C23B6C /* TodoList+CoreDataProperties.swift in Sources */,
+				B2A6D32026E2AA9500E1E5F7 /* SerpApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

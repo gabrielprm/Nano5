@@ -9,11 +9,11 @@ import UIKit
 
 class NewTodoListViewController: UIViewController {
     
-    var todoListViewControler: TodoListViewController!
-    
     @IBOutlet var todoListTitle: UITextField!
     
     @IBOutlet var todoListDescription: UITextView!
+    
+    var todoListViewControler: TodoListViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +22,12 @@ class NewTodoListViewController: UIViewController {
     
     @IBAction func todoListSaveButton(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Campo vazio", message: nil, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        alert.addAction(okAction)
-        
         guard todoListTitle.text != "" else {
+            let alert = UIAlertController(title: "Campo vazio", message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            alert.addAction(okAction)
+            
             present(alert, animated: true, completion: nil)
             return
         }
@@ -35,14 +35,9 @@ class NewTodoListViewController: UIViewController {
         let todoList = TodoList(context: todoListViewControler.context)
         
         todoList.titulo = todoListTitle.text
+        
         todoListViewControler.trip.addToTodoList(todoList)
-        
-        do {
-            try self.todoListViewControler.context.save()
-        } catch {
-            fatalError("Error saving To-do List")
-        }
-        
+        todoListViewControler.saveTodo()
         todoListViewControler.fetchToDo()
         
         dismiss(animated: true, completion: nil)

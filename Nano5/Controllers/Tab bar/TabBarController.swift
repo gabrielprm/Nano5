@@ -27,7 +27,8 @@ class TabBarController: UITabBarController {
         flightViewController = viewControllers![2] as? FlightViewController
         profileViewController = viewControllers![3] as? ProfileViewController
         
-        todoListViewController.configure(tabBarController: self)
+        todoListViewController.configure(trip: trip)
+        eventsViewController.configure(trip: trip)
     }
     
     var trip: Trip!

@@ -11,13 +11,13 @@ class TodoListViewController: UIViewController {
     
     
     //MARK: --Properties
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var destinoLabel: UILabel!
     
     @IBOutlet weak var dateLabel: UILabel!
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var trip: Trip!
     
@@ -47,9 +47,9 @@ class TodoListViewController: UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     
-    func configure(tabBarController: TabBarController) {
+    func configure(trip: Trip) {
         
-        self.trip = tabBarController.trip
+        self.trip = trip
         
         destinoLabel.text = trip.cidade
         
@@ -77,7 +77,7 @@ class TodoListViewController: UIViewController {
         do {
             try self.context.save()
         } catch {
-            fatalError("Error Saving Trips")
+            fatalError("Error thrown at deletion: SAVE")
         }
         
     }
@@ -132,8 +132,8 @@ extension TodoListViewController: UITableViewDelegate {
         let todoList = todoList![indexPath.section]
         
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "TodoItemList", sender: todoList)
         
+        performSegue(withIdentifier: "TodoItemList", sender: todoList)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -143,15 +143,9 @@ extension TodoListViewController: UITableViewDelegate {
             
             self.context.delete(listToDelete)
             
-            do{
-                try self.context.save()
-            }
-            catch {
-                print("Error thrown at deletion: SAVE")
-            }
-                        
-            self.fetchToDo()
+            self.saveTodo()
             
+            self.fetchToDo()
         }
         
         return UISwipeActionsConfiguration(actions: [action])

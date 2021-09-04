@@ -9,13 +9,13 @@ import UIKit
 
 class NewTripViewController: UIViewController {
     
-    var tripsViewController: TripViewController!
-    
     @IBOutlet weak var cityTextField: UITextField!
     
     @IBOutlet weak var chegadaDatePicker: UIDatePicker!
     
     @IBOutlet weak var saidaDatePicker: UIDatePicker!
+    
+    var tripsViewController: TripViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +24,12 @@ class NewTripViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
-        let alert = UIAlertController(title: "Campo vazio", message: nil, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        alert.addAction(okAction)
-        
         guard cityTextField.text != "" else {
+            let alert = UIAlertController(title: "Campo vazio", message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            alert.addAction(okAction)
+            
             present(alert, animated: true, completion: nil)
             return
         }

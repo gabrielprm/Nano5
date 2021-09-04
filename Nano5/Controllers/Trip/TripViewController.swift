@@ -10,9 +10,9 @@ import CoreData
 
 class TripViewController: UIViewController {
     
-    static let newTripSegueIdentifier = "NewTripSegueIdentifier"
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    static let newTripSegueIdentifier = "NewTripSegueIdentifier"
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
