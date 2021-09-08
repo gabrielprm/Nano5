@@ -107,75 +107,6 @@
             </objects>
             <point key="canvasLocation" x="3209" y="792"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="dap-ll-YeP">
-            <objects>
-                <viewController id="Gno-rt-WqZ" customClass="ProfileViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UpG-zq-B8k">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Menu Superior" translatesAutoresizingMaskIntoConstraints="NO" id="5Xa-hv-0rU">
-                                <rect key="frame" x="0.0" y="-10" width="390" height="339"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Claudia Ferraz" translatesAutoresizingMaskIntoConstraints="NO" id="vOD-pa-h2r">
-                                <rect key="frame" x="145" y="235" width="101" height="12"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Edit Profile" translatesAutoresizingMaskIntoConstraints="NO" id="nvc-0C-Ukt">
-                                <rect key="frame" x="161" y="255" width="68" height="11"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="ei_gear" translatesAutoresizingMaskIntoConstraints="NO" id="MwG-oA-G4Y">
-                                <rect key="frame" x="320" y="45" width="41" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an4-7I-QV6">
-                                <rect key="frame" x="16" y="337" width="181" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="36"/>
-                                <color key="textColor" red="0.078428693120000004" green="0.078432418409999996" blue="0.082568772139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 26" translatesAutoresizingMaskIntoConstraints="NO" id="Hda-KG-Hx0">
-                                <rect key="frame" x="122" y="86" width="146" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 27" translatesAutoresizingMaskIntoConstraints="NO" id="fNa-p2-jLb">
-                                <rect key="frame" x="27" y="410" width="101" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 29" translatesAutoresizingMaskIntoConstraints="NO" id="c0U-4Y-alL">
-                                <rect key="frame" x="27" y="527" width="101" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 30" translatesAutoresizingMaskIntoConstraints="NO" id="8iO-8k-LnX">
-                                <rect key="frame" x="148" y="527" width="101" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 31" translatesAutoresizingMaskIntoConstraints="NO" id="r3Y-dX-Jbd">
-                                <rect key="frame" x="268" y="410" width="101" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 32" translatesAutoresizingMaskIntoConstraints="NO" id="dW4-Jf-npT">
-                                <rect key="frame" x="268" y="527" width="101" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Rectangle 28" translatesAutoresizingMaskIntoConstraints="NO" id="ihv-2f-dQ0">
-                                <rect key="frame" x="148" y="410" width="101" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="SJj-wh-cLz"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="Pt5-VI-sDZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3dP-Zr-QSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2449.2307692307691" y="791.94312796208533"/>
-        </scene>
         <!--Events-->
         <scene sceneID="2aH-pd-LNe">
             <objects>
@@ -464,7 +395,7 @@
                         <segue destination="wTM-bi-LxI" kind="relationship" relationship="viewControllers" id="pwB-lQ-DNg"/>
                         <segue destination="dqv-fp-c1V" kind="relationship" relationship="viewControllers" id="xfx-gV-SXo"/>
                         <segue destination="yfh-A6-fe3" kind="relationship" relationship="viewControllers" id="WAf-uT-2Hu"/>
-                        <segue destination="Gno-rt-WqZ" kind="relationship" relationship="viewControllers" id="wdC-uZ-35v"/>
+                        <segue destination="zJe-b7-vf3" kind="relationship" relationship="viewControllers" id="55W-dB-fya"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zl0-SP-ivi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -627,25 +558,26 @@
             </objects>
             <point key="canvasLocation" x="2822" y="-725"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="IVR-dZ-5Xl">
+            <objects>
+                <hostingController id="zJe-b7-vf3" customClass="ProfileViewController" customModule="Nano5" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="XEr-aS-kH0">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihY-xn-6aX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2392" y="792"/>
+        </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
     <resources>
-        <image name="Claudia Ferraz" width="101" height="12"/>
-        <image name="Edit Profile" width="67.333335876464844" height="10.666666984558105"/>
         <image name="Flight details group" width="365.33334350585938" height="300"/>
-        <image name="Menu Superior" width="414.33334350585938" height="338.33334350585938"/>
-        <image name="Rectangle 26" width="146" height="141"/>
-        <image name="Rectangle 27" width="100.33333587646484" height="100.33333587646484"/>
-        <image name="Rectangle 28" width="100.33333587646484" height="100.33333587646484"/>
-        <image name="Rectangle 29" width="100.33333587646484" height="100.33333587646484"/>
-        <image name="Rectangle 30" width="100.33333587646484" height="100.33333587646484"/>
-        <image name="Rectangle 31" width="100.33333587646484" height="100.33333587646484"/>
-        <image name="Rectangle 32" width="100.33333587646484" height="100.33333587646484"/>
-        <image name="ei_gear" width="40.333332061767578" height="40"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="note" catalog="system" width="128" height="106"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AccentColor">
             <color red="0.40392156862745099" green="0.50980392156862742" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

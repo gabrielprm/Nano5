@@ -43,7 +43,7 @@ class TodoListViewController: UIViewController {
     
     @IBAction func didTapBackButton(_ sender: Any) {
         let viewController = storyboard?.instantiateViewController(identifier: "trips") as! TripViewController
-        
+        viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
     
