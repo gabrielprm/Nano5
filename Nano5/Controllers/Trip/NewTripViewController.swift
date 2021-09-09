@@ -51,6 +51,7 @@ class NewTripViewController: UIViewController {
         }
         
         tripsViewController.saveTrips()
+        tripsViewController.fetchTrips()
         
         dismiss(animated: true, completion: nil)
     }
