@@ -14,9 +14,9 @@ class TripViewController: UIViewController {
     
     static let newTripSegueIdentifier = "NewTripSegueIdentifier"
     
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    static var trips: [Trip]?
     
-    var trips: [Trip]?
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +37,12 @@ class TripViewController: UIViewController {
         
         do {
             let request = Trip.fetchRequest() as NSFetchRequest<Trip>
+            let sortFavorite = NSSortDescriptor(key: "isFavorite", ascending: false)
+            let sortName = NSSortDescriptor(key: "dataChegada", ascending: true)
             
-            try self.trips = context.fetch(request)
+            request.sortDescriptors = [sortFavorite, sortName]
+            
+            try TripViewController.trips = context.fetch(request)
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -58,8 +62,6 @@ class TripViewController: UIViewController {
             fatalError("Error saving trips.")
         }
 
-        self.fetchTrips()
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -71,13 +73,9 @@ class TripViewController: UIViewController {
         } else if segue.identifier == TabBarController.tabBarSegueIdentifier,
                   let destination = segue.destination as? TabBarController,
                   let trip = sender as? Trip {
-
+            
             destination.configure(trip)
         }
-    }
-    
-    func configureUI() {
-        tabBarController?.tabBar.isHidden = true
     }
     
 }
@@ -85,7 +83,7 @@ class TripViewController: UIViewController {
 extension TripViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return trips?.count ?? 0
+        return TripViewController.trips?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,7 +92,7 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
     
     // Redirection to todo list Trip.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let trip = trips![indexPath.section]
+        let trip = TripViewController.trips![indexPath.section]
         
         performSegue(withIdentifier: TabBarController.tabBarSegueIdentifier, sender: trip)
     }
@@ -105,32 +103,29 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
             fatalError("Error reading cell")
         }
         
-        let trip = trips![indexPath.section]
+        let trip = TripViewController.trips![indexPath.section]
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM"
-        
-        let dateChegada = dateFormatter.string(from: trip.dataChegada!)
-        let dateSaida = dateFormatter.string(from: trip.dataSaida!)
+        cell.tripsViewController = self
+        cell.trip = trip
         
         cell.titleLabel.text = trip.cidade
-        cell.dateLabel.text = "\(dateChegada) - \(dateSaida)"
-        cell.thumbImage.image = UIImage()
+        cell.dateLabel.text = cell.formatDate()
+        cell.favoriteButton.isSelected = trip.isFavorite
         
-//        cell.layer.masksToBounds = false
-//        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        cell.layer.shadowColor = UIColor.black.cgColor
-//        cell.layer.shadowOpacity = 0.23
-//        cell.layer.shadowRadius = 4
-        
-        Unsplash.requestImage(cell: cell)
+        if let image = trip.thumbnailImage {
+            cell.thumbImage.image = image
+        } else {
+            cell.thumbImage.image = UIImage()
+            
+            Unsplash.requestImage(cell: cell, trip: trip)
+        }
         
         return cell
     }
     
     // Update Trip.
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let tripToUpdate = self.trips![indexPath.section]
+        let tripToUpdate = TripViewController.trips![indexPath.section]
         let alertController = UIAlertController(title: "Update trip", message: nil, preferredStyle: .alert)
         
         alertController.addTextField { textField in
@@ -143,6 +138,7 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
             tripToUpdate.cidade = cidadeTextField.text
 
             self.saveTrips()
+            self.fetchTrips()
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -164,11 +160,12 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
     // Delete Trip.
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "Delete", handler: { action, view, completionHandler in
-            let tripToRemove = self.trips![indexPath.section]
+            let tripToRemove = TripViewController.trips![indexPath.section]
             
             self.context.delete(tripToRemove)
             
             self.saveTrips()
+            self.fetchTrips()
         })
         
         return UISwipeActionsConfiguration(actions: [delete])

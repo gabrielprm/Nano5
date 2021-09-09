@@ -11,7 +11,7 @@ class FlightViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.navigationBar.barStyle = .default
         // Do any additional setup after loading the view.
     }
     

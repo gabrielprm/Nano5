@@ -20,9 +20,10 @@ struct ProfilePictureContainerView: View {
                 Text("Claudia Ferraz")
                     .font(.callout)
                     .fontWeight(.bold)
+                    .foregroundColor(.black)
                 Text("Edit Profile")
                     .font(.footnote)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.gray)
             }.padding(.top, 30)
             
         }

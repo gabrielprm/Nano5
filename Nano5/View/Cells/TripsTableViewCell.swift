@@ -19,6 +19,9 @@ class TripsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var favoriteButton: UIButton!
     
+    var tripsViewController: TripViewController!
+    var trip: Trip!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,7 +39,27 @@ class TripsTableViewCell: UITableViewCell {
     }
     
     @IBAction func favoriteTapped(_ sender: Any) {
-        favoriteButton.isSelected = !favoriteButton.isSelected
+        trip.isFavorite = !trip.isFavorite
+        
+        favoriteButton.isSelected = trip.isFavorite
+        
+        tripsViewController.saveTrips()
+        tripsViewController.fetchTrips()
     }
+    
+    func formatDate() -> String {
+        guard let trip = trip else {
+            fatalError("Trip não atribuida.")
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM"
+        
+        let dateChegada = dateFormatter.string(from: trip.dataChegada!)
+        let dateSaida = dateFormatter.string(from: trip.dataSaida!)
+        
+        return "\(dateChegada) - \(dateSaida)"
+    }
+
 }
 

@@ -25,7 +25,7 @@ class NewTripViewController: UIViewController {
     
     @IBAction func saveButton(_ sender: UIButton) {
         guard cityTextField.text != "" else {
-            let alert = UIAlertController(title: "Campo vazio", message: nil, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Empty Field", message: nil, preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             
             alert.addAction(okAction)
@@ -37,8 +37,18 @@ class NewTripViewController: UIViewController {
         let trip = Trip(context: tripsViewController.context)
         
         trip.cidade = cityTextField.text
-        trip.dataChegada = chegadaDatePicker.date
-        trip.dataSaida = saidaDatePicker.date
+        trip.dataChegada = chegadaDatePicker!.date
+        trip.dataSaida = saidaDatePicker!.date
+        
+        if trip.dataChegada! > trip.dataSaida! {
+            let alert = UIAlertController(title: "Departure date is bigger than arrival date!\n Please set date again.", message: nil, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            alert.addAction(okAction)
+            
+            present(alert, animated: true, completion: nil)
+            return
+        }
         
         tripsViewController.saveTrips()
         

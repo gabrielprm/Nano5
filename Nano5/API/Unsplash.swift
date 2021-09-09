@@ -21,7 +21,7 @@ struct Url: Codable {
 
 extension Unsplash {
     
-    static func requestImage(cell: TripsTableViewCell) {
+    static func requestImage(cell: TripsTableViewCell, trip: Trip) {
         var city = cell.titleLabel.text!
         
         city = city.replacingOccurrences(of: " ", with: "%20")
@@ -48,13 +48,16 @@ extension Unsplash {
             guard let json = result else {
                 return
             }
-            
-            let urlThumb = URL(string: json.results[0].urls.thumb)!
-            let dataImage = try! Data(contentsOf: urlThumb)
 
             DispatchQueue.global(qos: .background).async {
+                let urlThumb = URL(string: json.results[0].urls.thumb)!
+                let dataImage = try! Data(contentsOf: urlThumb)
+                let image = UIImage(data: dataImage)
+                
                 DispatchQueue.main.async {
-                    cell.thumbImage.image = UIImage(data: dataImage)
+                    
+                    trip.thumbnailImage = image
+                    cell.thumbImage.image = image
                 }
             }
         })
