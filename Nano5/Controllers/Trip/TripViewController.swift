@@ -37,6 +37,10 @@ class TripViewController: UIViewController {
         
         do {
             let request = Trip.fetchRequest() as NSFetchRequest<Trip>
+            let sortFavorite = NSSortDescriptor(key: "isFavorite", ascending: false)
+            let sortName = NSSortDescriptor(key: "dataChegada", ascending: true)
+            
+            request.sortDescriptors = [sortFavorite, sortName]
             
             try TripViewController.trips = context.fetch(request)
             
@@ -57,8 +61,6 @@ class TripViewController: UIViewController {
         } catch {
             fatalError("Error saving trips.")
         }
-
-        self.fetchTrips()
 
     }
     
@@ -103,14 +105,12 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
         
         let trip = TripViewController.trips![indexPath.section]
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM"
-        
-        let dateChegada = dateFormatter.string(from: trip.dataChegada!)
-        let dateSaida = dateFormatter.string(from: trip.dataSaida!)
+        cell.tripsViewController = self
+        cell.trip = trip
         
         cell.titleLabel.text = trip.cidade
-        cell.dateLabel.text = "\(dateChegada) - \(dateSaida)"
+        cell.dateLabel.text = cell.formatDate()
+        cell.favoriteButton.isSelected = trip.isFavorite
         
         if let image = trip.thumbnailImage {
             cell.thumbImage.image = image
@@ -138,6 +138,7 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
             tripToUpdate.cidade = cidadeTextField.text
 
             self.saveTrips()
+            self.fetchTrips()
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -164,6 +165,7 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
             self.context.delete(tripToRemove)
             
             self.saveTrips()
+            self.fetchTrips()
         })
         
         return UISwipeActionsConfiguration(actions: [delete])
