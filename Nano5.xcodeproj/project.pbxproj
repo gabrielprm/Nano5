@@ -14,7 +14,6 @@
 		8977D8C826DD4A7600FEF577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C726DD4A7600FEF577 /* Assets.xcassets */; };
 		8977D8CB26DD4A7600FEF577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C926DD4A7600FEF577 /* LaunchScreen.storyboard */; };
 		89BA70E726E8FB80005B9E0A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA70E626E8FB80005B9E0A /* Extensions.swift */; };
-		89BA70E926E8FB90005B9E0A /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA70E826E8FB90005B9E0A /* ProfileModel.swift */; };
 		89BA70ED26E8FB9E005B9E0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA70EA26E8FB9E005B9E0A /* ContentView.swift */; };
 		89BA70EE26E8FB9E005B9E0A /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA70EB26E8FB9E005B9E0A /* ProfilePictureView.swift */; };
 		89BA70EF26E8FB9E005B9E0A /* ProfileTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA70EC26E8FB9E005B9E0A /* ProfileTripsView.swift */; };
@@ -58,7 +57,6 @@
 		8977D8CA26DD4A7600FEF577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8977D8CC26DD4A7600FEF577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89BA70E626E8FB80005B9E0A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		89BA70E826E8FB90005B9E0A /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		89BA70EA26E8FB9E005B9E0A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89BA70EB26E8FB9E005B9E0A /* ProfilePictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
 		89BA70EC26E8FB9E005B9E0A /* ProfileTripsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTripsView.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 		892132DF26DEA33000737399 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				89BA70E826E8FB90005B9E0A /* ProfileModel.swift */,
 				8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */,
 				B2E950A126DFF82200C23B6C /* Trip+CoreDataClass.swift */,
 				B2E950A226DFF82200C23B6C /* Trip+CoreDataProperties.swift */,
@@ -353,7 +350,6 @@
 				8977D8BC26DD4A7500FEF577 /* AppDelegate.swift in Sources */,
 				B2E950AE26DFF82200C23B6C /* TodoItem+CoreDataProperties.swift in Sources */,
 				BA50EC7126DD936900FB2C03 /* ToDoTableViewCell.swift in Sources */,
-				89BA70E926E8FB90005B9E0A /* ProfileModel.swift in Sources */,
 				B2163D1026E0802800FE3796 /* ProfileViewController.swift in Sources */,
 				B2163D0826E067C100FE3796 /* TodoListViewController.swift in Sources */,
 				B2E950AF26DFF82200C23B6C /* Events+CoreDataClass.swift in Sources */,

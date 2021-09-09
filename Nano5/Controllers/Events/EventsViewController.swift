@@ -93,9 +93,10 @@ extension EventsViewController: UITableViewDataSource {
         cell.dateEvent.text = date
         
         DispatchQueue.global(qos: .background).async {
+            let urlThumb = URL(string: event.thumbnail!)!
+            let dataImage = try! Data(contentsOf: urlThumb)
+            
             DispatchQueue.main.async {
-                let urlThumb = URL(string: event.thumbnail!)!
-                let dataImage = try! Data(contentsOf: urlThumb)
                 
                 cell.thumbnail.image = UIImage(data: dataImage)
             }
