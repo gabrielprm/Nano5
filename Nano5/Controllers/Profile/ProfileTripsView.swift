@@ -27,6 +27,7 @@ struct ProfileTripsView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
+                    .foregroundColor(.black)
                     .padding(.leading, 20)
                     .padding(.top, 20)
                 Spacer()

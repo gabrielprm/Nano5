@@ -76,10 +76,6 @@ class TripViewController: UIViewController {
         }
     }
     
-    func configureUI() {
-        tabBarController?.tabBar.isHidden = true
-    }
-    
 }
 
 extension TripViewController: UITableViewDataSource, UITableViewDelegate {
@@ -116,12 +112,6 @@ extension TripViewController: UITableViewDataSource, UITableViewDelegate {
         cell.titleLabel.text = trip.cidade
         cell.dateLabel.text = "\(dateChegada) - \(dateSaida)"
         cell.thumbImage.image = UIImage()
-        
-//        cell.layer.masksToBounds = false
-//        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        cell.layer.shadowColor = UIColor.black.cgColor
-//        cell.layer.shadowOpacity = 0.23
-//        cell.layer.shadowRadius = 4
         
         Unsplash.requestImage(cell: cell)
         
