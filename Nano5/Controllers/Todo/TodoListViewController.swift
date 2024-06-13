@@ -1,10 +1,3 @@
-//
-//  TripDetailViewController.swift
-//  Nano5
-//
-//  Created by Me on 01/09/21.
-//
-
 import UIKit
 
 class TodoListViewController: UIViewController {

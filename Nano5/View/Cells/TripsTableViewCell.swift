@@ -1,10 +1,3 @@
-//
-//  TableViewCell.swift
-//  Nano5
-//
-//  Created by João Victor on 30/08/21.
-//
-
 import UIKit
 
 class TripsTableViewCell: UITableViewCell {

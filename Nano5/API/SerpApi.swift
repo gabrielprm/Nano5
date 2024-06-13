@@ -1,10 +1,3 @@
-//
-//  Unsplash.swift
-//  Nano5
-//
-//  Created by Johnny Camacho on 02/09/21.
-//
-
 import UIKit
 
 struct SerpApi: Codable {
@@ -35,7 +28,7 @@ extension SerpApi {
         city = city.replacingOccurrences(of: " ", with: "%20")
         city = city.folding(options: .diacriticInsensitive, locale: .current)
         
-        let key = "07e616b370cc2d005e645fa71b46ead292866602747d7feb5aa3abe9a403adc9"
+        let key = "3d5a6f5accd63a9e032d63a135e25e2db3901b6d99c662df3892789a870b8edd"
         let urlSerpApi = "https://serpapi.com/search.json?engine=google_events&api_key=\(key)&q=\(city)"
         let url = URL(string: urlSerpApi)!
         
@@ -47,13 +40,13 @@ extension SerpApi {
             }
             
 //            Printar o JSON por completo.
-//            do {
-//                let dictionary = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any]
-//
-//                print(dictionary)
-//            } catch let error{
-//                print(error)
-//            }
+            do {
+                let dictionary = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any]
+
+                print(dictionary)
+            } catch let error{
+                print(error)
+            }
             
             var result: SerpApi?
             

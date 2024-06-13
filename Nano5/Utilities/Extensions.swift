@@ -1,10 +1,3 @@
-//
-//  Extensions.swift
-//  SwiftUIBasics
-//
-//  Created by Gabriel do Prado Moreira on 07/09/21.
-//
-
 import SwiftUI
 
 extension UIScreen{

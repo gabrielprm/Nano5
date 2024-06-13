@@ -1,10 +1,3 @@
-//
-//  TodoItemViewController.swift
-//  Nano5
-//
-//  Created by Gabriel do Prado Moreira on 02/09/21.
-//
-
 import UIKit
 
 class TodoItemViewController: UIViewController {

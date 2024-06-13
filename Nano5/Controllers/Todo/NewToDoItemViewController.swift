@@ -1,10 +1,3 @@
-//
-//  NewToDoItemViewController.swift
-//  Nano5
-//
-//  Created by João Victor on 02/09/21.
-//
-
 import Foundation
 import UIKit
 
