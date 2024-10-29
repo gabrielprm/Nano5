@@ -28,7 +28,7 @@ extension SerpApi {
         city = city.replacingOccurrences(of: " ", with: "%20")
         city = city.folding(options: .diacriticInsensitive, locale: .current)
         
-        let key = "3d5a6f5accd63a9e032d63a135e25e2db3901b6d99c662df3892789a870b8edd"
+        let key = "c4913f7568dc022db18a593cd8a753c11e62c562394687484029a6e1aef16a74"
         let urlSerpApi = "https://serpapi.com/search.json?engine=google_events&api_key=\(key)&q=\(city)"
         let url = URL(string: urlSerpApi)!
         

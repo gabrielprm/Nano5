@@ -10,7 +10,7 @@
 		8977D8BC26DD4A7500FEF577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */; };
 		8977D8BE26DD4A7500FEF577 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */; };
 		8977D8C026DD4A7500FEF577 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8BF26DD4A7500FEF577 /* TripViewController.swift */; };
-		8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */; };
+		8977D8C626DD4A7500FEF577 /* Trippie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8977D8C426DD4A7500FEF577 /* Trippie.xcdatamodeld */; };
 		8977D8C826DD4A7600FEF577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C726DD4A7600FEF577 /* Assets.xcassets */; };
 		8977D8CB26DD4A7600FEF577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8977D8C926DD4A7600FEF577 /* LaunchScreen.storyboard */; };
 		89BA70E726E8FB80005B9E0A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BA70E626E8FB80005B9E0A /* Extensions.swift */; };
@@ -48,14 +48,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8977D8B826DD4A7500FEF577 /* Nano5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nano5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		154B667C2CD14FD70070BE27 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8977D8B826DD4A7500FEF577 /* Trippie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trippie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8977D8BB26DD4A7500FEF577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8977D8BD26DD4A7500FEF577 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8977D8BF26DD4A7500FEF577 /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		8977D8C526DD4A7500FEF577 /* Nano5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nano5.xcdatamodel; sourceTree = "<group>"; };
 		8977D8C726DD4A7600FEF577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8977D8CA26DD4A7600FEF577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8977D8CC26DD4A7600FEF577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89BA70E626E8FB80005B9E0A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		89BA70EA26E8FB9E005B9E0A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89BA70EB26E8FB9E005B9E0A /* ProfilePictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 		892132DF26DEA33000737399 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */,
+				8977D8C426DD4A7500FEF577 /* Trippie.xcdatamodeld */,
 				B2E950A126DFF82200C23B6C /* Trip+CoreDataClass.swift */,
 				B2E950A226DFF82200C23B6C /* Trip+CoreDataProperties.swift */,
 				B2E950A326DFF82200C23B6C /* TodoList+CoreDataClass.swift */,
@@ -120,7 +120,7 @@
 		8977D8AF26DD4A7500FEF577 = {
 			isa = PBXGroup;
 			children = (
-				8977D8BA26DD4A7500FEF577 /* Nano5 */,
+				8977D8BA26DD4A7500FEF577 /* Trippie */,
 				8977D8B926DD4A7500FEF577 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,12 +128,12 @@
 		8977D8B926DD4A7500FEF577 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8977D8B826DD4A7500FEF577 /* Nano5.app */,
+				8977D8B826DD4A7500FEF577 /* Trippie.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8977D8BA26DD4A7500FEF577 /* Nano5 */ = {
+		8977D8BA26DD4A7500FEF577 /* Trippie */ = {
 			isa = PBXGroup;
 			children = (
 				89E0D0FF26E13CDA009E43DA /* Controllers */,
@@ -142,9 +142,9 @@
 				B25D6EB326E1893F00A8CE80 /* API */,
 				B25D6EB726E18A2F00A8CE80 /* Utilities */,
 				8977D8C726DD4A7600FEF577 /* Assets.xcassets */,
-				8977D8CC26DD4A7600FEF577 /* Info.plist */,
+				154B667C2CD14FD70070BE27 /* Info.plist */,
 			);
-			path = Nano5;
+			path = Trippie;
 			sourceTree = "<group>";
 		};
 		89E0D0FF26E13CDA009E43DA /* Controllers */ = {
@@ -270,9 +270,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8977D8B726DD4A7500FEF577 /* Nano5 */ = {
+		8977D8B726DD4A7500FEF577 /* Trippie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8977D8CF26DD4A7600FEF577 /* Build configuration list for PBXNativeTarget "Nano5" */;
+			buildConfigurationList = 8977D8CF26DD4A7600FEF577 /* Build configuration list for PBXNativeTarget "Trippie" */;
 			buildPhases = (
 				8977D8B426DD4A7500FEF577 /* Sources */,
 				8977D8B526DD4A7500FEF577 /* Frameworks */,
@@ -282,9 +282,9 @@
 			);
 			dependencies = (
 			);
-			name = Nano5;
+			name = Trippie;
 			productName = Nano5;
-			productReference = 8977D8B826DD4A7500FEF577 /* Nano5.app */;
+			productReference = 8977D8B826DD4A7500FEF577 /* Trippie.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -301,7 +301,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8977D8B326DD4A7500FEF577 /* Build configuration list for PBXProject "Nano5" */;
+			buildConfigurationList = 8977D8B326DD4A7500FEF577 /* Build configuration list for PBXProject "Trippie" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -314,7 +314,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8977D8B726DD4A7500FEF577 /* Nano5 */,
+				8977D8B726DD4A7500FEF577 /* Trippie */,
 			);
 		};
 /* End PBXProject section */
@@ -367,7 +367,7 @@
 				B2E950A926DFF82200C23B6C /* Trip+CoreDataClass.swift in Sources */,
 				B2E950B326E0463D00C23B6C /* NewTripViewController.swift in Sources */,
 				B2E950AA26DFF82200C23B6C /* Trip+CoreDataProperties.swift in Sources */,
-				8977D8C626DD4A7500FEF577 /* Nano5.xcdatamodeld in Sources */,
+				8977D8C626DD4A7500FEF577 /* Trippie.xcdatamodeld in Sources */,
 				89BA70ED26E8FB9E005B9E0A /* ContentView.swift in Sources */,
 				B2E950AC26DFF82200C23B6C /* TodoList+CoreDataProperties.swift in Sources */,
 				B2A6D32026E2AA9500E1E5F7 /* SerpApi.swift in Sources */,
@@ -512,12 +512,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZWZGGS7F2;
-				INFOPLIST_FILE = Nano5/Info.plist;
+				INFOPLIST_FILE = Trippie/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appleDeveloperAcademy.Trippie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GabrielMoreira.Trippie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -531,12 +532,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FZWZGGS7F2;
-				INFOPLIST_FILE = Nano5/Info.plist;
+				INFOPLIST_FILE = Trippie/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appleDeveloperAcademy.Trippie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GabrielMoreira.Trippie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -546,7 +548,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8977D8B326DD4A7500FEF577 /* Build configuration list for PBXProject "Nano5" */ = {
+		8977D8B326DD4A7500FEF577 /* Build configuration list for PBXProject "Trippie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8977D8CD26DD4A7600FEF577 /* Debug */,
@@ -555,7 +557,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8977D8CF26DD4A7600FEF577 /* Build configuration list for PBXNativeTarget "Nano5" */ = {
+		8977D8CF26DD4A7600FEF577 /* Build configuration list for PBXNativeTarget "Trippie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8977D8D026DD4A7600FEF577 /* Debug */,
@@ -567,13 +569,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8977D8C426DD4A7500FEF577 /* Nano5.xcdatamodeld */ = {
+		8977D8C426DD4A7500FEF577 /* Trippie.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				8977D8C526DD4A7500FEF577 /* Nano5.xcdatamodel */,
 			);
 			currentVersion = 8977D8C526DD4A7500FEF577 /* Nano5.xcdatamodel */;
-			path = Nano5.xcdatamodeld;
+			path = Trippie.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
